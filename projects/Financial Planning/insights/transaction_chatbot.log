@@ -1,0 +1,1503 @@
+2025-07-13 17:40:04,766 - __main__ - INFO - Initializing data connector...
+2025-07-13 17:40:04,767 - data.google_sheets_connector - ERROR - Authentication failed: Credentials file not found: credentials.json
+2025-07-13 17:40:04,767 - __main__ - ERROR - Error initializing components: Google Sheets credentials not found. Please check your configuration.
+2025-07-13 17:40:04,767 - __main__ - ERROR - Error in main: Google Sheets credentials not found. Please check your configuration.
+2025-07-13 17:40:55,557 - __main__ - INFO - Initializing data connector...
+2025-07-13 17:40:55,580 - data.google_sheets_connector - ERROR - Authentication failed: Credentials file not found: credentials.json
+2025-07-13 17:40:55,581 - __main__ - ERROR - Error initializing components: Google Sheets credentials not found. Please check your configuration.
+2025-07-13 17:40:55,581 - __main__ - ERROR - Error in main: Google Sheets credentials not found. Please check your configuration.
+2025-07-13 17:42:28,832 - __main__ - INFO - Initializing data connector...
+2025-07-13 17:43:35,323 - __main__ - INFO - Initializing data connector...
+2025-07-13 17:45:30,591 - __main__ - INFO - Initializing data connector...
+2025-07-13 17:45:37,531 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-13 17:45:37,554 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-13 17:45:37,555 - __main__ - INFO - Using Google Sheets connector
+2025-07-13 17:45:37,555 - __main__ - INFO - Initializing data processor...
+2025-07-13 17:45:37,555 - __main__ - INFO - Initializing LLM interface...
+2025-07-13 17:45:43,337 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-13 17:45:43,338 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-13 17:45:43,338 - __main__ - INFO - Initializing query translator...
+2025-07-13 17:45:43,338 - __main__ - INFO - Initializing result formatter...
+2025-07-13 17:45:43,339 - __main__ - INFO - All components initialized successfully
+2025-07-13 17:45:43,339 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-13 17:45:57,106 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-13 17:45:58,634 - data.google_sheets_connector - INFO - Found 32 sheets: ['Photographer', 'Volunteering', 'F Bar', 'Immigration', 'Medical', 'Stock Grant info', 'Financial Planning', 'Index-Stocks Ratio', 'Net worth', 'Forecasting', 'Credit cards', '401', 'to India', 'Design Life', 'House', 'house Pivot ', 'dummy', 'All Costs', 'Chase', 'Chase Pivot', 'ChaseTest', 'India Trip 2024', 'Citi', 'Citi Pivot', 'CitiTest', 'Cash', 'Furniture', 'Stats', 'europe trip', 'seven suns', 'Food', 'history details']
+2025-07-13 17:45:58,635 - data.google_sheets_connector - INFO - Google Sheets connection test successful
+2025-07-14 11:58:38,444 - __main__ - INFO - Initializing data connector...
+2025-07-14 11:58:45,620 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 11:58:45,628 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 11:58:45,628 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 11:58:45,628 - __main__ - INFO - Initializing data processor...
+2025-07-14 11:58:45,629 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 11:58:50,118 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 11:58:50,118 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 11:58:50,119 - __main__ - INFO - Initializing query translator...
+2025-07-14 11:58:50,119 - __main__ - INFO - Initializing result formatter...
+2025-07-14 11:58:50,119 - __main__ - INFO - All components initialized successfully
+2025-07-14 11:58:50,119 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 12:02:01,594 - __main__ - INFO - Loading transaction data...
+2025-07-14 12:02:01,596 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 12:02:01,597 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 12:02:04,183 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 12:02:04,184 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 12:02:04,508 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 12:02:04,508 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 12:02:04,813 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 12:02:04,814 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 12:02:04,815 - data.google_sheets_connector - WARNING - Missing required columns: ['date', 'description', 'amount', 'category']
+2025-07-14 12:02:04,815 - data.google_sheets_connector - WARNING - Skipping invalid transaction tab: Citi
+2025-07-14 12:02:04,815 - data.google_sheets_connector - WARNING - Missing required columns: ['date', 'description', 'amount', 'category']
+2025-07-14 12:02:04,815 - data.google_sheets_connector - WARNING - Skipping invalid transaction tab: Chase
+2025-07-14 12:02:04,816 - data.google_sheets_connector - WARNING - Missing required columns: ['date', 'description', 'amount', 'category']
+2025-07-14 12:02:04,816 - data.google_sheets_connector - WARNING - Skipping invalid transaction tab: Cash
+2025-07-14 12:02:04,816 - __main__ - ERROR - Error loading transaction data: Required columns not found in the spreadsheet.
+2025-07-14 12:06:22,600 - __main__ - INFO - Initializing data connector...
+2025-07-14 12:06:24,027 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 12:06:24,066 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 12:06:24,077 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 12:06:24,078 - __main__ - INFO - Initializing data processor...
+2025-07-14 12:06:24,079 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 12:06:28,505 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 12:06:28,505 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 12:06:28,505 - __main__ - INFO - Initializing query translator...
+2025-07-14 12:06:28,505 - __main__ - INFO - Initializing result formatter...
+2025-07-14 12:06:28,505 - __main__ - INFO - All components initialized successfully
+2025-07-14 12:06:28,505 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 12:06:28,506 - __main__ - INFO - Loading transaction data...
+2025-07-14 12:06:28,506 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 12:06:28,506 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 12:06:30,019 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 12:06:30,021 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 12:06:30,498 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 12:06:30,499 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 12:06:31,159 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 12:06:31,160 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 12:07:41,148 - matplotlib.font_manager - WARNING - Matplotlib is building the font cache; this may take a moment.
+2025-07-14 12:07:44,693 - matplotlib.font_manager - INFO - Failed to extract font properties from /System/Library/Fonts/Apple Color Emoji.ttc: Could not set the fontsize (invalid pixel size; error code 0x17)
+2025-07-14 12:07:44,708 - matplotlib.font_manager - INFO - Failed to extract font properties from /System/Library/Fonts/Supplemental/NISC18030.ttf: Could not set the fontsize (invalid pixel size; error code 0x17)
+2025-07-14 12:07:44,853 - matplotlib.font_manager - INFO - Failed to extract font properties from /System/Library/Fonts/LastResort.otf: tuple indices must be integers or slices, not str
+2025-07-14 12:07:44,998 - matplotlib.font_manager - INFO - generated new fontManager
+2025-07-14 12:11:43,504 - __main__ - INFO - Initializing data connector...
+2025-07-14 12:11:43,517 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 12:11:43,529 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 12:11:43,529 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 12:11:43,529 - __main__ - INFO - Initializing data processor...
+2025-07-14 12:11:43,529 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 12:11:47,700 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 12:11:47,701 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 12:11:47,701 - __main__ - INFO - Initializing query translator...
+2025-07-14 12:11:47,701 - __main__ - INFO - Initializing result formatter...
+2025-07-14 12:11:47,701 - __main__ - INFO - All components initialized successfully
+2025-07-14 12:11:47,701 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 12:11:47,701 - __main__ - INFO - Loading transaction data...
+2025-07-14 12:11:47,701 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 12:11:47,702 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 12:11:49,281 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 12:11:49,281 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 12:11:50,557 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 12:11:50,559 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 12:11:52,351 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 12:11:52,352 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 12:12:01,316 - data.google_sheets_connector - WARNING - Missing required columns: ['date', 'description', 'amount', 'category']
+2025-07-14 12:13:07,836 - __main__ - INFO - Initializing data connector...
+2025-07-14 12:13:07,851 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 12:13:07,870 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 12:13:07,871 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 12:13:07,871 - __main__ - INFO - Initializing data processor...
+2025-07-14 12:13:07,871 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 12:13:17,137 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 12:13:17,138 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 12:13:17,138 - __main__ - INFO - Initializing query translator...
+2025-07-14 12:13:17,139 - __main__ - INFO - Initializing result formatter...
+2025-07-14 12:13:17,139 - __main__ - INFO - All components initialized successfully
+2025-07-14 12:13:17,139 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 12:13:17,139 - __main__ - INFO - Loading transaction data...
+2025-07-14 12:13:17,140 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 12:13:17,140 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 12:13:18,505 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 12:13:18,505 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 12:13:18,766 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 12:13:18,766 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 12:13:19,082 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 12:13:19,082 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 12:13:39,099 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-14 12:13:41,824 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-14 12:13:45,635 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-14 12:13:49,148 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-14 12:13:49,149 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-14 12:13:49,150 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-14 12:13:49,157 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-14 12:13:49,166 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-14 12:13:49,167 - data.data_processor - INFO - All required columns are present
+2025-07-14 12:13:49,195 - data.data_processor - WARNING - Found 3672 rows with invalid dates
+2025-07-14 12:13:49,202 - data.data_processor - INFO - Cleaned date column: 0 valid rows
+2025-07-14 12:13:49,207 - data.data_processor - INFO - Cleaned amount column: 0 valid rows
+2025-07-14 12:13:49,210 - data.data_processor - INFO - Cleaned category column: 0 unique categories
+2025-07-14 12:13:49,223 - data.data_processor - INFO - Cleaned description column: 0 unique descriptions
+2025-07-14 12:13:49,241 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-14 12:13:49,261 - data.data_processor - INFO - Filtered to 0 valid transactions
+2025-07-14 12:13:49,261 - data.data_processor - INFO - Data processing completed: 0 final transactions
+2025-07-14 12:13:49,262 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-14 12:13:49,263 - __main__ - INFO - Step 4: Generating data summary
+2025-07-14 12:13:49,264 - __main__ - INFO - Successfully loaded 0 transactions
+2025-07-14 12:13:49,264 - __main__ - INFO - Data summary: {'error': 'No data available'}
+2025-07-14 12:13:49,265 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-14 12:13:49,265 - chatbot.conversation_manager - INFO - Created new session: session_1_20250714_121349
+2025-07-14 12:13:49,265 - __main__ - INFO - Created new chat session: session_1_20250714_121349
+2025-07-14 12:14:17,660 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 12:14:24,249 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 12:14:24,318 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on food last month?
+2025-07-14 12:14:24,319 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 12:14:24,353 - analysis.pandas_executor - INFO - Successfully executed 4 operations
+2025-07-14 12:14:24,353 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-14 12:14:24,354 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-14 12:14:33,911 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 12:14:34,084 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-14 12:14:38,525 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 12:14:38,529 - chatbot.conversation_manager - INFO - Processed message successfully: 959 characters
+2025-07-14 12:15:29,858 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 12:15:32,556 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 12:15:32,573 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month?
+2025-07-14 12:15:32,573 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 12:15:32,601 - analysis.pandas_executor - INFO - Successfully executed 4 operations
+2025-07-14 12:15:32,602 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-14 12:15:32,602 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-14 12:15:38,556 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 12:15:38,636 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-14 12:15:42,850 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 12:15:42,856 - chatbot.conversation_manager - INFO - Processed message successfully: 1204 characters
+2025-07-14 12:20:02,058 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 12:20:05,511 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 12:38:57,356 - chatbot.conversation_manager - INFO - Closed session: session_1_20250714_121349
+2025-07-14 12:40:12,537 - __main__ - INFO - Initializing data connector...
+2025-07-14 12:40:12,551 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 12:40:12,557 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 12:40:12,558 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 12:40:12,558 - __main__ - INFO - Initializing data processor...
+2025-07-14 12:40:12,560 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 12:40:21,077 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 12:40:21,077 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 12:40:21,077 - __main__ - INFO - Initializing query translator...
+2025-07-14 12:40:21,078 - __main__ - INFO - Initializing result formatter...
+2025-07-14 12:40:21,078 - __main__ - INFO - All components initialized successfully
+2025-07-14 12:40:21,078 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 12:40:21,078 - __main__ - INFO - Loading transaction data...
+2025-07-14 12:40:21,079 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 12:40:21,079 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 12:40:24,228 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 12:40:24,228 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 12:40:24,810 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 12:40:24,811 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 12:40:25,421 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 12:40:25,422 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 12:40:29,974 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-14 12:40:29,975 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-14 12:40:29,976 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-14 12:40:29,976 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-14 12:40:29,976 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-14 12:40:29,976 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-14 12:40:29,979 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-14 12:40:29,984 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-14 12:40:29,985 - data.data_processor - INFO - All required columns are present
+2025-07-14 12:40:30,004 - data.data_processor - WARNING - Found 3672 rows with invalid dates
+2025-07-14 12:40:30,011 - data.data_processor - INFO - Cleaned date column: 0 valid rows
+2025-07-14 12:40:30,016 - data.data_processor - INFO - Cleaned amount column: 0 valid rows
+2025-07-14 12:41:02,424 - data.data_processor - INFO - Cleaned category column: 0 unique categories
+2025-07-14 12:41:18,582 - data.data_processor - INFO - Cleaned description column: 0 unique descriptions
+2025-07-14 12:41:18,640 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-14 12:41:18,674 - data.data_processor - INFO - Filtered to 0 valid transactions
+2025-07-14 12:41:18,675 - data.data_processor - INFO - Data processing completed: 0 final transactions
+2025-07-14 12:41:18,676 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-14 12:41:18,678 - __main__ - INFO - Step 4: Generating data summary
+2025-07-14 12:41:18,680 - __main__ - INFO - Successfully loaded 0 transactions
+2025-07-14 12:41:18,681 - __main__ - INFO - Data summary: {'error': 'No data available'}
+2025-07-14 12:41:18,682 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-14 12:41:18,683 - chatbot.conversation_manager - INFO - Created new session: session_1_20250714_124118
+2025-07-14 12:41:18,684 - __main__ - INFO - Created new chat session: session_1_20250714_124118
+2025-07-14 12:41:39,167 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 12:41:47,605 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 12:42:28,001 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on Travel last month ?
+2025-07-14 12:42:28,003 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 12:42:56,334 - analysis.pandas_executor - INFO - Successfully executed 4 operations
+2025-07-14 12:43:29,951 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-14 12:44:00,247 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-14 12:44:20,742 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 12:44:51,465 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-14 12:44:57,913 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 12:44:57,924 - chatbot.conversation_manager - INFO - Processed message successfully: 957 characters
+2025-07-14 12:45:03,698 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 12:45:08,054 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 12:45:12,466 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on Travel last month ?
+2025-07-14 12:45:12,467 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 12:51:45,317 - analysis.pandas_executor - ERROR - Error executing operations: Execution timeout after 30 seconds
+2025-07-14 12:52:30,624 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 12:52:37,547 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 12:52:41,343 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on Travel last month ?
+2025-07-14 12:52:41,347 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 12:52:46,382 - chatbot.conversation_manager - INFO - Closed session: session_1_20250714_124118
+2025-07-14 12:52:50,465 - __main__ - INFO - Initializing data connector...
+2025-07-14 12:52:50,476 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 12:52:50,488 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 12:52:50,489 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 12:52:50,489 - __main__ - INFO - Initializing data processor...
+2025-07-14 12:52:50,489 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 12:52:58,166 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 12:52:58,167 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 12:52:58,167 - __main__ - INFO - Initializing query translator...
+2025-07-14 12:52:58,167 - __main__ - INFO - Initializing result formatter...
+2025-07-14 12:52:58,168 - __main__ - INFO - All components initialized successfully
+2025-07-14 12:52:58,168 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 12:52:58,168 - __main__ - INFO - Loading transaction data...
+2025-07-14 12:52:58,168 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 12:52:58,169 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 12:53:00,607 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 12:53:00,608 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 12:53:01,177 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 12:53:01,177 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 12:53:01,581 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 12:53:01,582 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 12:53:01,582 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-14 12:53:01,583 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-14 12:53:01,583 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-14 12:53:01,583 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-14 12:53:01,583 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-14 12:53:01,583 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-14 12:54:55,635 - __main__ - INFO - Initializing data connector...
+2025-07-14 12:54:55,649 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 12:54:55,669 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 12:54:55,669 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 12:54:55,670 - __main__ - INFO - Initializing data processor...
+2025-07-14 12:54:55,670 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 12:54:59,558 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 12:54:59,558 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 12:54:59,558 - __main__ - INFO - Initializing query translator...
+2025-07-14 12:54:59,558 - __main__ - INFO - Initializing result formatter...
+2025-07-14 12:54:59,558 - __main__ - INFO - All components initialized successfully
+2025-07-14 12:54:59,558 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 12:54:59,559 - __main__ - INFO - Loading transaction data...
+2025-07-14 12:54:59,559 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 12:54:59,559 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 12:55:00,787 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 12:55:00,795 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 12:55:01,297 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 12:55:01,299 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 12:55:01,596 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 12:55:01,596 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 12:55:01,597 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-14 12:55:01,597 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-14 12:55:01,598 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-14 12:55:01,598 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-14 12:55:01,598 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-14 12:55:01,598 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-14 12:57:32,305 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-14 12:58:16,317 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-14 12:58:20,822 - data.data_processor - INFO - All required columns are present
+2025-07-14 13:08:38,222 - __main__ - INFO - Initializing data connector...
+2025-07-14 13:08:38,235 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 13:08:38,239 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 13:08:38,240 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 13:08:38,240 - __main__ - INFO - Initializing data processor...
+2025-07-14 13:08:38,240 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 13:08:41,929 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 13:08:41,929 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 13:08:41,930 - __main__ - INFO - Initializing query translator...
+2025-07-14 13:08:41,930 - __main__ - INFO - Initializing result formatter...
+2025-07-14 13:08:41,930 - __main__ - INFO - All components initialized successfully
+2025-07-14 13:08:41,930 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 13:08:41,930 - __main__ - INFO - Loading transaction data...
+2025-07-14 13:08:41,930 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 13:08:41,931 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 13:08:43,428 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 13:08:43,429 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 13:08:43,985 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 13:08:43,985 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 13:08:44,246 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 13:08:44,246 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 13:08:44,247 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-14 13:08:44,247 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-14 13:08:44,248 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-14 13:08:44,248 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-14 13:08:44,248 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-14 13:08:44,248 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-14 13:08:50,179 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-14 13:08:51,844 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-14 13:08:51,845 - data.data_processor - INFO - All required columns are present
+2025-07-14 13:09:03,077 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-14 13:09:14,341 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-14 13:09:14,370 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-14 13:09:36,943 - data.data_processor - INFO - Cleaned category column: 19 unique categories
+2025-07-14 13:10:13,024 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-14 13:10:13,107 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-14 13:10:13,146 - data.data_processor - INFO - Removed 30 duplicate transactions
+2025-07-14 13:10:13,166 - data.data_processor - INFO - Filtered to 2353 valid transactions
+2025-07-14 13:10:13,167 - data.data_processor - INFO - Data processing completed: 2353 final transactions
+2025-07-14 13:10:13,168 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-14 13:10:13,170 - __main__ - INFO - Step 4: Generating data summary
+2025-07-14 13:10:13,190 - __main__ - INFO - Successfully loaded 2353 transactions
+2025-07-14 13:10:13,191 - __main__ - INFO - Data summary: {'total_transactions': 2353, 'date_range': {'start': '2021-08-04', 'end': '2025-06-30'}, 'total_amount': np.float64(101860.74), 'average_amount': np.float64(43.28973225669358), 'categories': {'Groceries': 770, 'Home': 445, 'Shopping': 403, 'Bills & Utilities': 168, 'Health': 102, 'Food': 101, 'Travel': 99, 'Food Nv': 66, 'Vacation': 62, 'Business': 40, 'Parentsg': 38, 'Gifts': 27, 'Education': 24, 'None': 3, 'Bills\xa0&\xa0Utilities': 3, 'Fees & Adjustments': 2}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 362, 'HONG KONG SUPERMARKET BOSTON MA': 88, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 39, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #510 BOSTON MA': 33, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30, 'TRADER JOE S #501 BROOKLINE MA': 29, 'LAUNDRY MOBCODE 617969 WESTON MA': 26}, 'tabs': {'Citi': 2147, 'Cash': 180, 'Chase': 26}}
+2025-07-14 13:10:13,192 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-14 13:10:13,193 - chatbot.conversation_manager - INFO - Created new session: session_1_20250714_131013
+2025-07-14 13:10:13,194 - __main__ - INFO - Created new chat session: session_1_20250714_131013
+2025-07-14 13:10:46,704 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 13:10:55,499 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 13:11:05,043 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month ?
+2025-07-14 13:11:05,045 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 13:12:32,303 - analysis.pandas_executor - INFO - Successfully executed 4 operations
+2025-07-14 13:12:32,307 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-14 13:12:32,311 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-14 13:12:35,657 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 13:12:44,967 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-14 13:12:48,054 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 13:12:48,096 - chatbot.conversation_manager - INFO - Processed message successfully: 1054 characters
+2025-07-14 13:12:59,503 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 13:13:04,533 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 13:13:07,608 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month ?
+2025-07-14 13:13:07,613 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 13:14:44,077 - analysis.pandas_executor - ERROR - Error executing operations: Execution timeout after 30 seconds
+2025-07-14 13:15:06,568 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 13:15:10,918 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 13:15:21,920 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month?
+2025-07-14 13:15:21,928 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 13:17:27,194 - analysis.pandas_executor - ERROR - Error executing operations: Execution timeout after 30 seconds
+2025-07-14 13:18:06,230 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 13:18:10,925 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 13:18:11,936 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month ?
+2025-07-14 13:18:11,940 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 13:21:46,840 - chatbot.conversation_manager - INFO - Closed session: session_1_20250714_131013
+2025-07-14 13:21:53,319 - __main__ - INFO - Initializing data connector...
+2025-07-14 13:21:53,333 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 13:21:53,344 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 13:21:53,344 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 13:21:53,345 - __main__ - INFO - Initializing data processor...
+2025-07-14 13:21:53,345 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 13:22:00,758 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 13:22:00,758 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 13:22:00,759 - __main__ - INFO - Initializing query translator...
+2025-07-14 13:22:00,759 - __main__ - INFO - Initializing result formatter...
+2025-07-14 13:22:00,759 - __main__ - INFO - All components initialized successfully
+2025-07-14 13:22:00,759 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 13:22:00,764 - __main__ - INFO - Loading transaction data...
+2025-07-14 13:22:00,764 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 13:22:00,764 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 13:22:02,549 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 13:22:02,549 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 13:22:03,098 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 13:22:03,099 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 13:22:03,419 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 13:22:03,420 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 13:22:03,420 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-14 13:22:03,420 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-14 13:22:03,420 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-14 13:22:03,421 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-14 13:22:03,421 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-14 13:22:03,421 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-14 13:22:03,423 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-14 13:22:06,566 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-14 13:22:06,567 - data.data_processor - INFO - All required columns are present
+2025-07-14 13:22:08,223 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-14 13:22:08,238 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-14 13:22:08,245 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-14 13:22:11,191 - data.data_processor - INFO - Cleaned category column: 19 unique categories
+2025-07-14 13:22:11,216 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-14 13:22:11,251 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-14 13:22:11,259 - data.data_processor - INFO - Removed 30 duplicate transactions
+2025-07-14 13:22:11,264 - data.data_processor - INFO - Filtered to 2353 valid transactions
+2025-07-14 13:22:11,265 - data.data_processor - INFO - Data processing completed: 2353 final transactions
+2025-07-14 13:22:11,265 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-14 13:22:11,266 - __main__ - INFO - Step 4: Generating data summary
+2025-07-14 13:22:11,270 - __main__ - INFO - Successfully loaded 2353 transactions
+2025-07-14 13:22:11,271 - __main__ - INFO - Data summary: {'total_transactions': 2353, 'date_range': {'start': '2021-08-04', 'end': '2025-06-30'}, 'total_amount': np.float64(101860.74), 'average_amount': np.float64(43.28973225669358), 'categories': {'Groceries': 770, 'Home': 445, 'Shopping': 403, 'Bills & Utilities': 168, 'Health': 102, 'Food': 101, 'Travel': 99, 'Food Nv': 66, 'Vacation': 62, 'Business': 40, 'Parentsg': 38, 'Gifts': 27, 'Education': 24, 'None': 3, 'Bills\xa0&\xa0Utilities': 3, 'Fees & Adjustments': 2}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 362, 'HONG KONG SUPERMARKET BOSTON MA': 88, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 39, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #510 BOSTON MA': 33, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30, 'TRADER JOE S #501 BROOKLINE MA': 29, 'LAUNDRY MOBCODE 617969 WESTON MA': 26}, 'tabs': {'Citi': 2147, 'Cash': 180, 'Chase': 26}}
+2025-07-14 13:22:11,271 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-14 13:22:11,271 - chatbot.conversation_manager - INFO - Created new session: session_1_20250714_132211
+2025-07-14 13:22:11,271 - __main__ - INFO - Created new chat session: session_1_20250714_132211
+2025-07-14 13:22:23,786 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 13:22:31,804 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 13:22:33,639 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month?
+2025-07-14 13:22:33,640 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 13:23:05,935 - analysis.pandas_executor - ERROR - Error executing operations: Execution timeout after 30 seconds
+2025-07-14 13:23:16,285 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 13:23:19,178 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 13:23:21,408 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month ?
+2025-07-14 13:23:21,412 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 13:23:29,158 - analysis.pandas_executor - INFO - Successfully executed 4 operations
+2025-07-14 13:23:29,161 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-14 13:23:29,164 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-14 13:23:33,355 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 13:23:47,252 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-14 13:23:51,271 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 13:23:51,295 - chatbot.conversation_manager - INFO - Processed message successfully: 943 characters
+2025-07-14 13:23:56,104 - chatbot.conversation_manager - INFO - Closed session: session_1_20250714_132211
+2025-07-14 15:23:30,146 - __main__ - INFO - Initializing data connector...
+2025-07-14 15:23:30,159 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 15:23:30,171 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 15:23:30,171 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 15:23:30,171 - __main__ - INFO - Initializing data processor...
+2025-07-14 15:23:30,171 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 15:23:34,071 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 15:23:34,071 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 15:23:34,071 - __main__ - INFO - Initializing query translator...
+2025-07-14 15:23:34,071 - __main__ - INFO - Initializing result formatter...
+2025-07-14 15:23:34,072 - __main__ - INFO - All components initialized successfully
+2025-07-14 15:23:34,072 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 15:23:34,072 - __main__ - INFO - Loading transaction data...
+2025-07-14 15:23:34,072 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 15:23:34,072 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 15:23:35,578 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 15:23:35,579 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 15:23:36,148 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 15:23:36,148 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 15:23:36,419 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 15:23:36,419 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 15:23:36,420 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-14 15:23:36,420 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-14 15:23:36,421 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-14 15:23:36,421 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-14 15:23:36,421 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-14 15:23:36,421 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-14 15:23:36,425 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-14 15:23:41,372 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-14 15:23:41,379 - data.data_processor - INFO - All required columns are present
+2025-07-14 15:23:43,270 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-14 15:23:43,387 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-14 15:23:43,420 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-14 15:23:46,608 - data.data_processor - INFO - Cleaned category column: 19 unique categories
+2025-07-14 15:23:46,701 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-14 15:23:46,943 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-14 15:23:47,172 - data.data_processor - INFO - Removed 30 duplicate transactions
+2025-07-14 15:23:47,190 - data.data_processor - INFO - Filtered to 2353 valid transactions
+2025-07-14 15:23:47,191 - data.data_processor - INFO - Data processing completed: 2353 final transactions
+2025-07-14 15:23:47,192 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-14 15:23:47,193 - __main__ - INFO - Step 4: Generating data summary
+2025-07-14 15:23:47,207 - __main__ - INFO - Successfully loaded 2353 transactions
+2025-07-14 15:23:47,219 - __main__ - INFO - Data summary: {'total_transactions': 2353, 'date_range': {'start': '2021-08-04', 'end': '2025-06-30'}, 'total_amount': np.float64(101860.74), 'average_amount': np.float64(43.28973225669358), 'categories': {'Groceries': 770, 'Home': 445, 'Shopping': 403, 'Bills & Utilities': 168, 'Health': 102, 'Food': 101, 'Travel': 99, 'Food Nv': 66, 'Vacation': 62, 'Business': 40, 'Parentsg': 38, 'Gifts': 27, 'Education': 24, 'None': 3, 'Bills\xa0&\xa0Utilities': 3, 'Fees & Adjustments': 2}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 362, 'HONG KONG SUPERMARKET BOSTON MA': 88, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 39, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #510 BOSTON MA': 33, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30, 'TRADER JOE S #501 BROOKLINE MA': 29, 'LAUNDRY MOBCODE 617969 WESTON MA': 26}, 'tabs': {'Citi': 2147, 'Cash': 180, 'Chase': 26}}
+2025-07-14 15:23:47,220 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-14 15:23:47,221 - chatbot.conversation_manager - INFO - Created new session: session_1_20250714_152347
+2025-07-14 15:23:47,221 - __main__ - INFO - Created new chat session: session_1_20250714_152347
+2025-07-14 15:23:59,922 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 15:24:06,558 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 15:24:08,966 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month?
+2025-07-14 15:24:08,966 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 15:25:16,605 - analysis.pandas_executor - ERROR - Error executing operations: Execution timeout after 30 seconds
+2025-07-14 15:26:30,561 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 15:26:34,958 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 15:26:37,617 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month?
+2025-07-14 15:26:37,620 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 15:29:00,650 - analysis.pandas_executor - ERROR - Error executing operations: Execution timeout after 30 seconds
+2025-07-14 15:29:04,761 - chatbot.conversation_manager - INFO - Closed session: session_1_20250714_152347
+2025-07-14 15:29:08,787 - __main__ - INFO - Initializing data connector...
+2025-07-14 15:29:08,799 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 15:29:08,818 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 15:29:08,818 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 15:29:08,819 - __main__ - INFO - Initializing data processor...
+2025-07-14 15:29:08,819 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 15:29:16,915 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 15:29:16,928 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 15:29:16,929 - __main__ - INFO - Initializing query translator...
+2025-07-14 15:29:16,929 - __main__ - INFO - Initializing result formatter...
+2025-07-14 15:29:16,930 - __main__ - INFO - All components initialized successfully
+2025-07-14 15:29:16,931 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 15:29:16,931 - __main__ - INFO - Loading transaction data...
+2025-07-14 15:29:16,931 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 15:29:16,932 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 15:29:18,770 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 15:29:18,770 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 15:29:19,290 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 15:29:19,291 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 15:29:19,564 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 15:29:19,565 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 15:29:19,565 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-14 15:29:19,565 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-14 15:29:19,566 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-14 15:29:19,566 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-14 15:29:19,566 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-14 15:29:19,566 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-14 15:29:19,569 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-14 15:29:28,691 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-14 15:29:28,691 - data.data_processor - INFO - All required columns are present
+2025-07-14 15:29:29,932 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-14 15:29:29,945 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-14 15:29:29,952 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-14 15:29:34,433 - data.data_processor - INFO - Cleaned category column: 19 unique categories
+2025-07-14 15:29:34,461 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-14 15:29:34,494 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-14 15:29:34,503 - data.data_processor - INFO - Removed 30 duplicate transactions
+2025-07-14 15:29:34,507 - data.data_processor - INFO - Filtered to 2353 valid transactions
+2025-07-14 15:29:34,508 - data.data_processor - INFO - Data processing completed: 2353 final transactions
+2025-07-14 15:29:34,508 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-14 15:29:34,509 - __main__ - INFO - Step 4: Generating data summary
+2025-07-14 15:29:34,513 - __main__ - INFO - Successfully loaded 2353 transactions
+2025-07-14 15:29:34,513 - __main__ - INFO - Data summary: {'total_transactions': 2353, 'date_range': {'start': '2021-08-04', 'end': '2025-06-30'}, 'total_amount': np.float64(101860.74), 'average_amount': np.float64(43.28973225669358), 'categories': {'Groceries': 770, 'Home': 445, 'Shopping': 403, 'Bills & Utilities': 168, 'Health': 102, 'Food': 101, 'Travel': 99, 'Food Nv': 66, 'Vacation': 62, 'Business': 40, 'Parentsg': 38, 'Gifts': 27, 'Education': 24, 'None': 3, 'Bills\xa0&\xa0Utilities': 3, 'Fees & Adjustments': 2}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 362, 'HONG KONG SUPERMARKET BOSTON MA': 88, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 39, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #510 BOSTON MA': 33, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30, 'TRADER JOE S #501 BROOKLINE MA': 29, 'LAUNDRY MOBCODE 617969 WESTON MA': 26}, 'tabs': {'Citi': 2147, 'Cash': 180, 'Chase': 26}}
+2025-07-14 15:29:34,514 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-14 15:29:34,514 - chatbot.conversation_manager - INFO - Created new session: session_1_20250714_152934
+2025-07-14 15:29:34,514 - __main__ - INFO - Created new chat session: session_1_20250714_152934
+2025-07-14 15:29:51,270 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 15:29:56,135 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 15:30:02,524 - analysis.query_translator - INFO - Successfully translated query: how much did I spend on travel last month ?
+2025-07-14 15:30:02,534 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 15:32:48,274 - chatbot.conversation_manager - INFO - Closed session: session_1_20250714_152934
+2025-07-14 15:36:04,917 - __main__ - INFO - Initializing data connector...
+2025-07-14 15:36:04,927 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 15:36:04,944 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 15:36:04,944 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 15:36:04,944 - __main__ - INFO - Initializing data processor...
+2025-07-14 15:36:04,944 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 15:36:08,941 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 15:36:08,941 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 15:36:08,941 - __main__ - INFO - Initializing query translator...
+2025-07-14 15:36:08,941 - __main__ - INFO - Initializing result formatter...
+2025-07-14 15:36:08,941 - __main__ - INFO - All components initialized successfully
+2025-07-14 15:36:08,942 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 15:36:08,942 - __main__ - INFO - Loading transaction data...
+2025-07-14 15:36:08,942 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 15:36:08,942 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 15:36:10,380 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 15:36:10,381 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 15:36:10,941 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 15:36:10,941 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 15:36:11,252 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 15:36:11,252 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 15:36:11,253 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-14 15:36:11,253 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-14 15:36:11,253 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-14 15:36:11,254 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-14 15:36:11,254 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-14 15:36:11,254 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-14 15:36:11,257 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-14 15:36:29,426 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-14 15:36:29,427 - data.data_processor - INFO - All required columns are present
+2025-07-14 15:36:30,572 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-14 15:36:30,605 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-14 15:36:30,615 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-14 15:36:30,642 - data.data_processor - INFO - Cleaned category column: 19 unique categories
+2025-07-14 15:36:30,689 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-14 15:36:30,752 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-14 15:36:30,812 - data.data_processor - INFO - Removed 30 duplicate transactions
+2025-07-14 15:36:30,834 - data.data_processor - INFO - Filtered to 2353 valid transactions
+2025-07-14 15:36:30,835 - data.data_processor - INFO - Data processing completed: 2353 final transactions
+2025-07-14 15:36:30,835 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-14 15:36:30,836 - __main__ - INFO - Step 4: Generating data summary
+2025-07-14 15:36:30,856 - __main__ - INFO - Successfully loaded 2353 transactions
+2025-07-14 15:36:30,858 - __main__ - INFO - Data summary: {'total_transactions': 2353, 'date_range': {'start': '2021-08-04', 'end': '2025-06-30'}, 'total_amount': np.float64(101860.74), 'average_amount': np.float64(43.28973225669358), 'categories': {'Groceries': 770, 'Home': 445, 'Shopping': 403, 'Bills & Utilities': 168, 'Health': 102, 'Food': 101, 'Travel': 99, 'Food Nv': 66, 'Vacation': 62, 'Business': 40, 'Parentsg': 38, 'Gifts': 27, 'Education': 24, 'None': 3, 'Bills\xa0&\xa0Utilities': 3, 'Fees & Adjustments': 2}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 362, 'HONG KONG SUPERMARKET BOSTON MA': 88, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 39, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #510 BOSTON MA': 33, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30, 'TRADER JOE S #501 BROOKLINE MA': 29, 'LAUNDRY MOBCODE 617969 WESTON MA': 26}, 'tabs': {'Citi': 2147, 'Cash': 180, 'Chase': 26}}
+2025-07-14 15:36:30,859 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-14 15:36:30,860 - chatbot.conversation_manager - INFO - Created new session: session_1_20250714_153630
+2025-07-14 15:36:30,860 - __main__ - INFO - Created new chat session: session_1_20250714_153630
+2025-07-14 15:36:49,372 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 15:36:57,020 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 15:37:09,465 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month?
+2025-07-14 15:37:09,505 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 15:39:22,699 - analysis.pandas_executor - INFO - Successfully executed 4 operations
+2025-07-14 15:39:39,557 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-14 15:39:42,381 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-14 15:39:57,351 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 15:40:25,222 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-14 15:40:27,731 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 15:40:27,738 - chatbot.conversation_manager - INFO - Processed message successfully: 1023 characters
+2025-07-14 15:45:50,040 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 15:45:53,724 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 15:45:57,051 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month in year 2025?
+2025-07-14 15:45:57,054 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 16:54:44,256 - chatbot.conversation_manager - INFO - Closed session: session_1_20250714_153630
+2025-07-14 16:54:51,943 - __main__ - INFO - Initializing data connector...
+2025-07-14 16:54:52,410 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 16:54:52,478 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 16:54:52,478 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 16:54:52,480 - __main__ - INFO - Initializing data processor...
+2025-07-14 16:54:52,481 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 16:55:04,581 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 16:55:04,581 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 16:55:04,582 - __main__ - INFO - Initializing query translator...
+2025-07-14 16:55:04,582 - __main__ - INFO - Initializing result formatter...
+2025-07-14 16:55:04,582 - __main__ - INFO - All components initialized successfully
+2025-07-14 16:55:04,582 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 16:55:04,582 - __main__ - INFO - Loading transaction data...
+2025-07-14 16:55:04,583 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 16:55:04,583 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 16:55:07,229 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 16:55:07,231 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 16:55:07,815 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 16:55:07,815 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 16:55:08,098 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 16:55:08,098 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 16:55:08,099 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-14 16:55:08,099 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-14 16:55:08,099 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-14 16:55:08,099 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-14 16:55:08,104 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-14 16:55:08,104 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-14 16:55:08,132 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-14 16:55:12,338 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-14 16:55:12,340 - data.data_processor - INFO - All required columns are present
+2025-07-14 16:55:12,388 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-14 16:55:12,405 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-14 16:55:12,415 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-14 16:55:12,445 - data.data_processor - INFO - Cleaned category column: 19 unique categories
+2025-07-14 16:55:12,478 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-14 16:55:12,522 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-14 16:55:12,589 - data.data_processor - INFO - Removed 30 duplicate transactions
+2025-07-14 16:55:12,613 - data.data_processor - INFO - Filtered to 2353 valid transactions
+2025-07-14 16:55:12,613 - data.data_processor - INFO - Data processing completed: 2353 final transactions
+2025-07-14 16:55:12,614 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-14 16:55:12,615 - __main__ - INFO - Step 4: Generating data summary
+2025-07-14 16:55:12,625 - __main__ - INFO - Successfully loaded 2353 transactions
+2025-07-14 16:55:12,626 - __main__ - INFO - Data summary: {'total_transactions': 2353, 'date_range': {'start': '2021-08-04', 'end': '2025-06-30'}, 'total_amount': np.float64(101860.74), 'average_amount': np.float64(43.28973225669358), 'categories': {'Groceries': 770, 'Home': 445, 'Shopping': 403, 'Bills & Utilities': 168, 'Health': 102, 'Food': 101, 'Travel': 99, 'Food Nv': 66, 'Vacation': 62, 'Business': 40, 'Parentsg': 38, 'Gifts': 27, 'Education': 24, 'None': 3, 'Bills\xa0&\xa0Utilities': 3, 'Fees & Adjustments': 2}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 362, 'HONG KONG SUPERMARKET BOSTON MA': 88, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 39, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #510 BOSTON MA': 33, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30, 'TRADER JOE S #501 BROOKLINE MA': 29, 'LAUNDRY MOBCODE 617969 WESTON MA': 26}, 'tabs': {'Citi': 2147, 'Cash': 180, 'Chase': 26}}
+2025-07-14 16:55:12,627 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-14 16:55:12,627 - chatbot.conversation_manager - INFO - Created new session: session_1_20250714_165512
+2025-07-14 16:55:12,627 - __main__ - INFO - Created new chat session: session_1_20250714_165512
+2025-07-14 16:55:17,474 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 16:55:23,867 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 16:55:39,649 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month?
+2025-07-14 16:55:39,652 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 16:56:11,987 - analysis.pandas_executor - INFO - Successfully executed 4 operations
+2025-07-14 16:57:35,698 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-14 17:00:16,935 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-14 17:00:26,444 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 17:00:31,391 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-14 17:00:34,423 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 17:00:43,668 - chatbot.conversation_manager - INFO - Processed message successfully: 1023 characters
+2025-07-14 17:00:51,928 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 17:00:57,182 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 17:00:58,258 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month?
+2025-07-14 17:00:58,264 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 17:20:18,807 - analysis.pandas_executor - INFO - Successfully executed 4 operations
+2025-07-14 17:20:18,821 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-14 17:20:18,828 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-14 17:20:29,181 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 17:20:37,708 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-14 17:20:41,142 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 17:20:47,372 - chatbot.conversation_manager - INFO - Processed message successfully: 1153 characters
+2025-07-14 17:21:03,052 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 17:21:06,109 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 17:27:24,172 - chatbot.conversation_manager - INFO - Closed session: session_1_20250714_165512
+2025-07-14 17:27:47,936 - __main__ - INFO - Initializing data connector...
+2025-07-14 17:27:47,948 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 17:27:47,968 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 17:27:47,968 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 17:27:47,968 - __main__ - INFO - Initializing data processor...
+2025-07-14 17:27:47,969 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 17:27:52,025 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 17:27:52,025 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 17:27:52,025 - __main__ - INFO - Initializing query translator...
+2025-07-14 17:27:52,025 - __main__ - INFO - Initializing result formatter...
+2025-07-14 17:27:52,025 - __main__ - INFO - All components initialized successfully
+2025-07-14 17:27:52,026 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 17:27:52,026 - __main__ - INFO - Loading transaction data...
+2025-07-14 17:27:52,026 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 17:27:52,026 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 17:27:54,366 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 17:27:54,368 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 17:27:54,886 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 17:27:54,887 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 17:27:55,503 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 17:27:55,504 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 17:27:55,504 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-14 17:27:55,504 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-14 17:27:55,505 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-14 17:27:55,505 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-14 17:27:55,505 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-14 17:27:55,505 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-14 17:27:55,532 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-14 17:28:02,016 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-14 17:28:02,017 - data.data_processor - INFO - All required columns are present
+2025-07-14 17:28:02,186 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-14 17:28:02,210 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-14 17:28:02,237 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-14 17:28:02,263 - data.data_processor - INFO - Cleaned category column: 19 unique categories
+2025-07-14 17:28:02,307 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-14 17:28:02,443 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-14 17:28:02,509 - data.data_processor - INFO - Removed 30 duplicate transactions
+2025-07-14 17:28:02,534 - data.data_processor - INFO - Filtered to 2353 valid transactions
+2025-07-14 17:28:02,535 - data.data_processor - INFO - Data processing completed: 2353 final transactions
+2025-07-14 17:28:02,535 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-14 17:28:02,536 - __main__ - INFO - Step 4: Generating data summary
+2025-07-14 17:28:02,564 - __main__ - INFO - Successfully loaded 2353 transactions
+2025-07-14 17:28:02,564 - __main__ - INFO - Data summary: {'total_transactions': 2353, 'date_range': {'start': '2021-08-04', 'end': '2025-06-30'}, 'total_amount': np.float64(101860.74), 'average_amount': np.float64(43.28973225669358), 'categories': {'Groceries': 770, 'Home': 445, 'Shopping': 403, 'Bills & Utilities': 168, 'Health': 102, 'Food': 101, 'Travel': 99, 'Food Nv': 66, 'Vacation': 62, 'Business': 40, 'Parentsg': 38, 'Gifts': 27, 'Education': 24, 'None': 3, 'Bills\xa0&\xa0Utilities': 3, 'Fees & Adjustments': 2}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 362, 'HONG KONG SUPERMARKET BOSTON MA': 88, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 39, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #510 BOSTON MA': 33, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30, 'TRADER JOE S #501 BROOKLINE MA': 29, 'LAUNDRY MOBCODE 617969 WESTON MA': 26}, 'tabs': {'Citi': 2147, 'Cash': 180, 'Chase': 26}}
+2025-07-14 17:28:02,565 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-14 17:28:02,565 - chatbot.conversation_manager - INFO - Created new session: session_1_20250714_172802
+2025-07-14 17:28:02,565 - __main__ - INFO - Created new chat session: session_1_20250714_172802
+2025-07-14 17:28:17,814 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 17:28:22,231 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 17:28:56,905 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month?
+2025-07-14 17:28:56,906 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 17:29:57,086 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-14 17:29:57,089 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-14 17:29:57,090 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-14 17:30:10,980 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 17:30:13,219 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-14 17:30:15,588 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 17:30:18,832 - chatbot.conversation_manager - INFO - Processed message successfully: 956 characters
+2025-07-14 17:37:47,941 - chatbot.conversation_manager - INFO - Closed session: session_1_20250714_172802
+2025-07-14 17:38:54,806 - __main__ - INFO - Initializing data connector...
+2025-07-14 17:38:54,852 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 17:38:54,863 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 17:38:54,863 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 17:38:54,863 - __main__ - INFO - Initializing data processor...
+2025-07-14 17:38:54,864 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 17:39:04,416 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 17:39:04,417 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 17:39:04,418 - __main__ - INFO - Initializing query translator...
+2025-07-14 17:39:04,419 - __main__ - INFO - Initializing result formatter...
+2025-07-14 17:39:04,420 - __main__ - INFO - All components initialized successfully
+2025-07-14 17:39:04,420 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 17:39:04,420 - __main__ - INFO - Loading transaction data...
+2025-07-14 17:39:04,421 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 17:39:04,421 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 17:39:06,544 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 17:39:06,545 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 17:39:07,046 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 17:39:07,047 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 17:39:07,358 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 17:39:07,358 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 17:39:07,359 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-14 17:39:07,359 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-14 17:39:07,359 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-14 17:39:07,359 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-14 17:39:07,359 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-14 17:39:07,360 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-14 17:39:07,364 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-14 17:39:18,367 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-14 17:39:18,368 - data.data_processor - INFO - All required columns are present
+2025-07-14 17:39:18,394 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-14 17:39:18,413 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-14 17:39:18,423 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-14 17:39:18,449 - data.data_processor - INFO - Cleaned category column: 19 unique categories
+2025-07-14 17:39:18,484 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-14 17:39:18,565 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-14 17:39:18,605 - data.data_processor - INFO - Removed 30 duplicate transactions
+2025-07-14 17:40:50,677 - __main__ - INFO - Initializing data connector...
+2025-07-14 17:40:50,701 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-14 17:40:50,725 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-14 17:40:50,726 - __main__ - INFO - Using Google Sheets connector
+2025-07-14 17:40:50,727 - __main__ - INFO - Initializing data processor...
+2025-07-14 17:40:50,728 - __main__ - INFO - Initializing LLM interface...
+2025-07-14 17:40:56,439 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-14 17:40:56,440 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-14 17:40:56,440 - __main__ - INFO - Initializing query translator...
+2025-07-14 17:40:56,440 - __main__ - INFO - Initializing result formatter...
+2025-07-14 17:40:56,440 - __main__ - INFO - All components initialized successfully
+2025-07-14 17:40:56,440 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-14 17:40:56,440 - __main__ - INFO - Loading transaction data...
+2025-07-14 17:40:56,441 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-14 17:40:56,441 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-14 17:40:57,706 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-14 17:40:57,707 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-14 17:40:57,990 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-14 17:40:57,992 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-14 17:40:58,574 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-14 17:40:58,575 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-14 17:40:58,575 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-14 17:40:58,575 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-14 17:40:58,576 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-14 17:40:58,576 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-14 17:40:58,576 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-14 17:40:58,576 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-14 17:40:58,586 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-14 17:41:01,001 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-14 17:41:01,002 - data.data_processor - INFO - All required columns are present
+2025-07-14 17:41:01,033 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-14 17:41:01,048 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-14 17:41:01,061 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-14 17:41:01,097 - data.data_processor - INFO - Cleaned category column: 19 unique categories
+2025-07-14 17:41:01,148 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-14 17:41:01,195 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-14 17:42:42,657 - data.data_processor - INFO - Filtered to 3669 valid transactions
+2025-07-14 17:42:47,063 - data.data_processor - INFO - Data processing completed: 3669 final transactions
+2025-07-14 17:42:47,064 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-14 17:42:47,070 - __main__ - INFO - Step 4: Generating data summary
+2025-07-14 17:42:47,142 - __main__ - INFO - Successfully loaded 3669 transactions
+2025-07-14 17:42:47,144 - __main__ - INFO - Data summary: {'total_transactions': 3669, 'date_range': {'start': '2021-07-22', 'end': '2025-06-30'}, 'total_amount': np.float64(29282.269999999997), 'average_amount': np.float64(7.980994821477241), 'categories': {'Groceries': 828, 'Shopping': 524, 'Home': 519, 'Food': 461, 'Travel': 417, 'Vacation': 327, 'Bills & Utilities': 187, 'Food Nv': 129, 'Health': 114, 'Business': 43, 'Parentsg': 38, 'Gifts': 33, 'Education': 26, 'None': 7, 'Fees & Adjustments': 6, 'Health & Wellness': 4, 'Bills\xa0&\xa0Utilities': 3, 'Personal': 2, 'Automotive': 1}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 375, 'HONG KONG SUPERMARKET BOSTON MA': 89, 'UBER   TRIP': 89, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 40, 'TRADER JOE S #510 BOSTON MA': 35, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #501 BROOKLINE MA': 31, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30}, 'tabs': {'Citi': 2251, 'Chase': 1200, 'Cash': 218}}
+2025-07-14 17:42:47,145 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-14 17:42:47,146 - chatbot.conversation_manager - INFO - Created new session: session_1_20250714_174247
+2025-07-14 17:42:47,146 - __main__ - INFO - Created new chat session: session_1_20250714_174247
+2025-07-14 17:43:03,022 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 17:43:08,909 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 17:43:13,769 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month?
+2025-07-14 17:43:13,772 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 17:43:30,261 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-14 17:43:30,263 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-14 17:43:30,265 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-14 17:43:35,535 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 17:43:49,064 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-14 17:43:52,435 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 17:43:53,651 - chatbot.conversation_manager - INFO - Processed message successfully: 631 characters
+2025-07-14 17:44:48,129 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-14 17:44:50,500 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 17:45:21,030 - analysis.query_translator - INFO - Successfully translated query: Can you provide a breakdown of the travel expenses to identify the largest categories, such as flights, accommodation, or transportation?
+2025-07-14 17:45:21,031 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-14 17:46:12,302 - analysis.pandas_executor - INFO - Successfully executed 3 operations
+2025-07-14 17:46:12,306 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-14 17:46:12,308 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-14 17:46:38,222 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 17:46:44,447 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-14 17:46:46,938 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-14 17:47:18,022 - chatbot.conversation_manager - INFO - Processed message successfully: 1052 characters
+2025-07-14 17:53:21,558 - chatbot.conversation_manager - INFO - Closed session: session_1_20250714_174247
+2025-07-15 17:22:25,122 - __main__ - INFO - Initializing data connector...
+2025-07-15 17:22:25,134 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-15 17:22:25,147 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-15 17:22:25,147 - __main__ - INFO - Using Google Sheets connector
+2025-07-15 17:22:25,147 - __main__ - INFO - Initializing data processor...
+2025-07-15 17:22:25,147 - __main__ - INFO - Initializing LLM interface...
+2025-07-15 17:22:27,407 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-15 17:22:27,407 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-15 17:22:27,407 - __main__ - INFO - Initializing query translator...
+2025-07-15 17:22:27,407 - __main__ - INFO - Initializing result formatter...
+2025-07-15 17:22:27,407 - __main__ - INFO - All components initialized successfully
+2025-07-15 17:22:27,408 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-15 17:22:27,408 - __main__ - INFO - Loading transaction data...
+2025-07-15 17:22:27,408 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-15 17:22:27,408 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-15 17:22:29,404 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-15 17:22:29,404 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-15 17:22:29,718 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-15 17:22:29,718 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-15 17:22:30,023 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-15 17:22:30,024 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-15 17:22:30,024 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-15 17:22:30,024 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-15 17:22:30,024 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-15 17:22:30,025 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-15 17:22:30,025 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-15 17:22:30,026 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-15 17:22:30,072 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-15 17:22:30,098 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-15 17:22:30,099 - data.data_processor - INFO - All required columns are present
+2025-07-15 17:22:30,140 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-15 17:22:30,159 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-15 17:22:30,168 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-15 17:22:30,177 - data.data_processor - INFO - Cleaned category column: 20 unique categories
+2025-07-15 17:22:30,189 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-15 17:22:30,229 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-15 17:22:30,234 - data.data_processor - INFO - Filtered to 3669 valid transactions
+2025-07-15 17:22:30,235 - data.data_processor - INFO - Data processing completed: 3669 final transactions
+2025-07-15 17:22:30,235 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-15 17:22:30,237 - __main__ - INFO - Step 4: Generating data summary
+2025-07-15 17:22:30,250 - __main__ - INFO - Successfully loaded 3669 transactions
+2025-07-15 17:22:30,252 - __main__ - INFO - Data summary: {'total_transactions': 3669, 'date_range': {'start': '2021-07-22', 'end': '2025-06-30'}, 'total_amount': np.float64(129717.47), 'average_amount': np.float64(35.35499318615427), 'categories': {'Groceries': 831, 'Shopping': 524, 'Home': 516, 'Food': 462, 'Travel': 418, 'Vacation': 327, 'Bills & Utilities': 187, 'Food Nv': 127, 'Health': 114, 'Business': 43, 'Parentsg': 38, 'Gifts': 32, 'Education': 26, 'None': 7, 'Fees & Adjustments': 6, 'Health & Wellness': 4, 'Bills\xa0&\xa0Utilities': 3, 'Personal': 2, 'Automotive': 1, 'Other': 1}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 375, 'HONG KONG SUPERMARKET BOSTON MA': 89, 'UBER   TRIP': 89, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 40, 'TRADER JOE S #510 BOSTON MA': 35, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #501 BROOKLINE MA': 31, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30}, 'tabs': {'Citi': 2251, 'Chase': 1200, 'Cash': 218}}
+2025-07-15 17:22:30,253 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-15 17:22:30,253 - chatbot.conversation_manager - INFO - Created new session: session_1_20250715_172230
+2025-07-15 17:22:30,253 - __main__ - INFO - Created new chat session: session_1_20250715_172230
+2025-07-15 17:22:51,066 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-15 17:22:53,882 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:22:53,903 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month?
+2025-07-15 17:22:53,904 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-15 17:22:53,927 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-15 17:22:53,927 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-15 17:22:53,927 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-15 17:22:56,235 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:22:56,237 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-15 17:22:59,152 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:22:59,160 - chatbot.conversation_manager - INFO - Processed message successfully: 397 characters
+2025-07-15 17:23:32,278 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-15 17:23:34,636 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:23:34,638 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month in 2025 ?
+2025-07-15 17:23:34,638 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-15 17:23:34,651 - analysis.pandas_executor - INFO - Successfully executed 6 operations
+2025-07-15 17:23:34,652 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-15 17:23:34,652 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-15 17:23:38,936 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:23:38,939 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-15 17:23:41,907 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:23:41,912 - chatbot.conversation_manager - INFO - Processed message successfully: 449 characters
+2025-07-15 17:24:33,154 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-15 17:24:34,949 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:24:34,952 - analysis.query_translator - INFO - Successfully translated query: can you give me the top 5 expenses under travel for last month in this year ?
+2025-07-15 17:24:34,953 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-15 17:24:35,011 - analysis.pandas_executor - INFO - Successfully executed 4 operations
+2025-07-15 17:24:35,012 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-15 17:24:35,012 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-15 17:24:43,142 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:24:43,144 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-15 17:24:44,677 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:24:44,680 - chatbot.conversation_manager - INFO - Processed message successfully: 1237 characters
+2025-07-15 17:25:23,775 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-15 17:25:25,946 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:25:25,948 - analysis.query_translator - INFO - Successfully translated query: can you give me the top 5 expenses under travel for last month?
+2025-07-15 17:25:25,948 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-15 17:25:26,061 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-15 17:25:26,061 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-15 17:25:26,061 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-15 17:25:31,476 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:25:31,479 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-15 17:25:34,755 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:25:34,757 - chatbot.conversation_manager - INFO - Processed message successfully: 1357 characters
+2025-07-15 17:26:37,770 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-15 17:26:40,494 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:26:40,497 - analysis.query_translator - INFO - Successfully translated query: can you give me the top 5 expenses under travel for last month?
+2025-07-15 17:26:40,497 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-15 17:26:40,508 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-15 17:26:40,509 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-15 17:26:40,509 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-15 17:26:46,638 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:26:46,641 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-15 17:26:48,420 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:26:48,428 - chatbot.conversation_manager - INFO - Processed message successfully: 1516 characters
+2025-07-15 17:27:37,540 - chatbot.conversation_manager - INFO - Closed session: session_1_20250715_172230
+2025-07-15 17:27:49,877 - __main__ - INFO - Initializing data connector...
+2025-07-15 17:27:49,888 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-15 17:27:49,902 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-15 17:27:49,903 - __main__ - INFO - Using Google Sheets connector
+2025-07-15 17:27:49,903 - __main__ - INFO - Initializing data processor...
+2025-07-15 17:27:49,903 - __main__ - INFO - Initializing LLM interface...
+2025-07-15 17:27:56,177 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-15 17:27:56,177 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-15 17:27:56,178 - __main__ - INFO - Initializing query translator...
+2025-07-15 17:27:56,178 - __main__ - INFO - Initializing result formatter...
+2025-07-15 17:27:56,178 - __main__ - INFO - All components initialized successfully
+2025-07-15 17:27:56,178 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-15 17:27:56,178 - __main__ - INFO - Loading transaction data...
+2025-07-15 17:27:56,178 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-15 17:27:56,178 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-15 17:27:57,633 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-15 17:27:57,634 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-15 17:27:58,019 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-15 17:27:58,019 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-15 17:27:58,428 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-15 17:27:58,428 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-15 17:27:58,429 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-15 17:27:58,429 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-15 17:27:58,429 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-15 17:27:58,430 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-15 17:27:58,430 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-15 17:27:58,430 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-15 17:27:58,432 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-15 17:28:10,545 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-15 17:28:10,548 - data.data_processor - INFO - All required columns are present
+2025-07-15 17:28:10,568 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-15 17:28:10,583 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-15 17:28:10,591 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-15 17:28:10,608 - data.data_processor - INFO - Cleaned category column: 20 unique categories
+2025-07-15 17:28:10,632 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-15 17:28:10,677 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-15 17:28:17,329 - data.data_processor - INFO - Filtered to 3669 valid transactions
+2025-07-15 17:28:17,330 - data.data_processor - INFO - Data processing completed: 3669 final transactions
+2025-07-15 17:28:17,330 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-15 17:28:17,333 - __main__ - INFO - Step 4: Generating data summary
+2025-07-15 17:28:17,342 - __main__ - INFO - Successfully loaded 3669 transactions
+2025-07-15 17:28:17,342 - __main__ - INFO - Data summary: {'total_transactions': 3669, 'date_range': {'start': '2021-07-22', 'end': '2025-06-30'}, 'total_amount': np.float64(129717.47), 'average_amount': np.float64(35.35499318615427), 'categories': {'Groceries': 831, 'Shopping': 524, 'Home': 516, 'Food': 462, 'Travel': 418, 'Vacation': 327, 'Bills & Utilities': 187, 'Food Nv': 127, 'Health': 114, 'Business': 43, 'Parentsg': 38, 'Gifts': 32, 'Education': 26, 'None': 7, 'Fees & Adjustments': 6, 'Health & Wellness': 4, 'Bills\xa0&\xa0Utilities': 3, 'Personal': 2, 'Automotive': 1, 'Other': 1}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 375, 'HONG KONG SUPERMARKET BOSTON MA': 89, 'UBER   TRIP': 89, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 40, 'TRADER JOE S #510 BOSTON MA': 35, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #501 BROOKLINE MA': 31, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30}, 'tabs': {'Citi': 2251, 'Chase': 1200, 'Cash': 218}}
+2025-07-15 17:28:17,343 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-15 17:28:17,343 - chatbot.conversation_manager - INFO - Created new session: session_1_20250715_172817
+2025-07-15 17:28:17,343 - __main__ - INFO - Created new chat session: session_1_20250715_172817
+2025-07-15 17:28:58,698 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-15 17:29:03,401 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:30:09,503 - analysis.query_translator - INFO - Successfully translated query: can you give the top 5 expense in the last month for travel ?
+2025-07-15 17:30:09,505 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-15 17:33:30,609 - analysis.pandas_executor - INFO - Successfully executed 4 operations
+2025-07-15 17:33:35,514 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-15 17:35:29,660 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-15 17:40:01,899 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-15 17:40:05,548 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-15 17:40:25,874 - chatbot.conversation_manager - INFO - Closed session: session_1_20250715_172817
+2025-07-16 11:52:40,339 - __main__ - INFO - Initializing data connector...
+2025-07-16 11:52:40,350 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-16 11:52:40,368 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-16 11:52:40,368 - __main__ - INFO - Using Google Sheets connector
+2025-07-16 11:52:40,368 - __main__ - INFO - Initializing data processor...
+2025-07-16 11:52:40,368 - __main__ - INFO - Initializing LLM interface...
+2025-07-16 11:52:45,253 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-16 11:52:45,253 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-16 11:52:45,253 - __main__ - INFO - Initializing query translator...
+2025-07-16 11:52:45,254 - __main__ - INFO - Initializing result formatter...
+2025-07-16 11:52:45,254 - __main__ - INFO - All components initialized successfully
+2025-07-16 11:52:45,254 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-16 11:52:45,254 - __main__ - INFO - Loading transaction data...
+2025-07-16 11:52:45,254 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-16 11:52:45,254 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-16 11:52:48,025 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-16 11:52:48,025 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-16 11:52:48,436 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-16 11:52:48,437 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-16 11:52:48,860 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-16 11:52:48,861 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-16 11:52:48,861 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-16 11:52:48,861 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-16 11:52:48,861 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-16 11:52:48,862 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-16 11:52:48,862 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-16 11:52:48,862 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-16 11:52:48,866 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-16 11:52:48,879 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-16 11:52:48,879 - data.data_processor - INFO - All required columns are present
+2025-07-16 11:52:48,906 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-16 11:52:48,927 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-16 11:52:48,937 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-16 11:52:49,100 - data.data_processor - INFO - Cleaned category column: 20 unique categories
+2025-07-16 11:52:49,199 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-16 11:52:49,500 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-16 11:52:56,698 - data.data_processor - INFO - Filtered to 3669 valid transactions
+2025-07-16 11:52:56,700 - data.data_processor - INFO - Data processing completed: 3669 final transactions
+2025-07-16 11:52:56,700 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-16 11:52:56,702 - __main__ - INFO - Step 4: Generating data summary
+2025-07-16 11:52:56,737 - __main__ - INFO - Successfully loaded 3669 transactions
+2025-07-16 11:52:56,738 - __main__ - INFO - Data summary: {'total_transactions': 3669, 'date_range': {'start': '2021-07-22', 'end': '2025-06-30'}, 'total_amount': np.float64(129717.47), 'average_amount': np.float64(35.35499318615427), 'categories': {'Groceries': 831, 'Shopping': 524, 'Home': 516, 'Food': 462, 'Travel': 418, 'Vacation': 327, 'Bills & Utilities': 187, 'Food Nv': 127, 'Health': 114, 'Business': 43, 'Parentsg': 38, 'Gifts': 32, 'Education': 26, 'None': 7, 'Fees & Adjustments': 6, 'Health & Wellness': 4, 'Bills\xa0&\xa0Utilities': 3, 'Personal': 2, 'Automotive': 1, 'Other': 1}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 375, 'HONG KONG SUPERMARKET BOSTON MA': 89, 'UBER   TRIP': 89, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 40, 'TRADER JOE S #510 BOSTON MA': 35, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #501 BROOKLINE MA': 31, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30}, 'tabs': {'Citi': 2251, 'Chase': 1200, 'Cash': 218}}
+2025-07-16 11:52:56,739 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-16 11:52:56,740 - chatbot.conversation_manager - INFO - Created new session: session_1_20250716_115256
+2025-07-16 11:52:56,740 - __main__ - INFO - Created new chat session: session_1_20250716_115256
+2025-07-16 11:53:02,052 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-16 11:53:14,369 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 11:53:16,567 - analysis.query_translator - INFO - Successfully translated query: How much did I spend on travel last month?
+2025-07-16 11:53:16,568 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-16 11:53:29,827 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-16 11:53:29,828 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-16 11:53:29,829 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-16 11:53:38,015 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 11:53:45,314 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-16 11:53:50,300 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 11:53:53,422 - chatbot.conversation_manager - INFO - Processed message successfully: 416 characters
+2025-07-16 11:54:24,402 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-16 11:54:28,700 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 11:54:32,130 - analysis.query_translator - INFO - Successfully translated query: can you give the top 5 expenses in the last month for travel ?
+2025-07-16 11:54:32,131 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-16 11:54:47,833 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-16 11:54:47,834 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-16 11:54:51,497 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-16 11:55:00,745 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 11:55:04,480 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-16 11:55:06,179 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 11:55:08,796 - chatbot.conversation_manager - INFO - Processed message successfully: 924 characters
+2025-07-16 11:57:27,560 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-16 11:57:33,314 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 11:57:36,413 - analysis.query_translator - INFO - Successfully translated query: can you give the top 5 expense in the last month for travel alongwith the month information ?
+2025-07-16 11:57:36,413 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-16 11:57:42,484 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-16 11:57:42,509 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-16 11:57:42,511 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-16 11:57:50,228 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 11:57:50,233 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-16 11:57:52,991 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 11:58:01,190 - chatbot.conversation_manager - INFO - Processed message successfully: 1121 characters
+2025-07-16 12:02:04,802 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-16 12:02:08,403 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:02:11,218 - analysis.query_translator - INFO - Successfully translated query: filter on month of may and travel , give me the top 5 expenses, include the year and month for each of the top expenses
+2025-07-16 12:02:11,219 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-16 12:03:01,279 - chatbot.conversation_manager - INFO - Closed session: session_1_20250716_115256
+2025-07-16 12:07:26,610 - __main__ - INFO - Initializing data connector...
+2025-07-16 12:07:26,708 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-16 12:07:26,725 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-16 12:07:26,725 - __main__ - INFO - Using Google Sheets connector
+2025-07-16 12:07:26,725 - __main__ - INFO - Initializing data processor...
+2025-07-16 12:07:26,725 - __main__ - INFO - Initializing LLM interface...
+2025-07-16 12:07:31,533 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-16 12:07:31,533 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-16 12:07:31,533 - __main__ - INFO - Initializing query translator...
+2025-07-16 12:07:31,534 - __main__ - INFO - Initializing result formatter...
+2025-07-16 12:07:31,534 - __main__ - INFO - All components initialized successfully
+2025-07-16 12:07:31,534 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-16 12:07:31,534 - __main__ - INFO - Loading transaction data...
+2025-07-16 12:07:31,535 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-16 12:07:31,535 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-16 12:07:33,073 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-16 12:07:33,073 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-16 12:07:33,407 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-16 12:07:33,407 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-16 12:07:33,733 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-16 12:07:33,733 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-16 12:07:33,734 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-16 12:07:33,734 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-16 12:07:33,735 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-16 12:07:33,735 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-16 12:07:33,735 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-16 12:07:33,735 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-16 12:07:33,738 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-16 12:07:33,769 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-16 12:07:33,770 - data.data_processor - INFO - All required columns are present
+2025-07-16 12:07:33,811 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-16 12:07:33,827 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-16 12:07:33,834 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-16 12:07:33,848 - data.data_processor - INFO - Cleaned category column: 20 unique categories
+2025-07-16 12:07:33,882 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-16 12:07:33,917 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-16 12:07:36,803 - data.data_processor - INFO - Filtered to 3669 valid transactions
+2025-07-16 12:07:36,804 - data.data_processor - INFO - Data processing completed: 3669 final transactions
+2025-07-16 12:07:36,805 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-16 12:07:36,806 - __main__ - INFO - Step 4: Generating data summary
+2025-07-16 12:07:36,815 - __main__ - INFO - Successfully loaded 3669 transactions
+2025-07-16 12:07:36,816 - __main__ - INFO - Data summary: {'total_transactions': 3669, 'date_range': {'start': '2021-07-22', 'end': '2025-06-30'}, 'total_amount': np.float64(129717.47), 'average_amount': np.float64(35.35499318615427), 'categories': {'Groceries': 831, 'Shopping': 524, 'Home': 516, 'Food': 462, 'Travel': 418, 'Vacation': 327, 'Bills & Utilities': 187, 'Food Nv': 127, 'Health': 114, 'Business': 43, 'Parentsg': 38, 'Gifts': 32, 'Education': 26, 'None': 7, 'Fees & Adjustments': 6, 'Health & Wellness': 4, 'Bills\xa0&\xa0Utilities': 3, 'Personal': 2, 'Automotive': 1, 'Other': 1}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 375, 'HONG KONG SUPERMARKET BOSTON MA': 89, 'UBER   TRIP': 89, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 40, 'TRADER JOE S #510 BOSTON MA': 35, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #501 BROOKLINE MA': 31, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30}, 'tabs': {'Citi': 2251, 'Chase': 1200, 'Cash': 218}}
+2025-07-16 12:07:36,817 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-16 12:07:36,817 - chatbot.conversation_manager - INFO - Created new session: session_1_20250716_120736
+2025-07-16 12:07:36,817 - __main__ - INFO - Created new chat session: session_1_20250716_120736
+2025-07-16 12:07:55,386 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-16 12:08:01,568 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:08:02,401 - analysis.query_translator - INFO - Successfully translated query: filter on month of may and travel , give me the top 5 expenses, include the year and month for each of the top expenses
+2025-07-16 12:08:02,402 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-16 12:08:04,024 - analysis.pandas_executor - INFO - Successfully executed 4 operations
+2025-07-16 12:08:04,025 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-16 12:08:04,025 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-16 12:08:12,639 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:08:12,644 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-16 12:08:15,080 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:08:17,398 - chatbot.conversation_manager - INFO - Processed message successfully: 1007 characters
+2025-07-16 12:09:11,026 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-16 12:09:14,678 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:10:33,649 - analysis.query_translator - INFO - Successfully translated query: filter on month of may and travel , give me the top 5 expenses, include the year and month for each of the top expenses
+2025-07-16 12:10:33,652 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-16 12:10:38,637 - analysis.pandas_executor - INFO - Successfully executed 4 operations
+2025-07-16 12:10:38,637 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-16 12:10:38,638 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-16 12:12:00,877 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:12:00,896 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-16 12:12:04,561 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:12:18,370 - chatbot.conversation_manager - INFO - Processed message successfully: 1498 characters
+2025-07-16 12:12:22,708 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-16 12:12:25,302 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:12:29,179 - analysis.query_translator - INFO - Successfully translated query: filter on month of may and travel , give me the top 5 expenses, include the year and month for each of the top expenses
+2025-07-16 12:12:29,179 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-16 12:20:25,975 - chatbot.conversation_manager - INFO - Closed session: session_1_20250716_120736
+2025-07-16 12:20:34,371 - __main__ - INFO - Initializing data connector...
+2025-07-16 12:20:34,395 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-16 12:20:34,407 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-16 12:20:34,407 - __main__ - INFO - Using Google Sheets connector
+2025-07-16 12:20:34,408 - __main__ - INFO - Initializing data processor...
+2025-07-16 12:20:34,408 - __main__ - INFO - Initializing LLM interface...
+2025-07-16 12:20:38,960 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-16 12:20:38,960 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-16 12:20:38,960 - __main__ - INFO - Initializing query translator...
+2025-07-16 12:20:38,960 - __main__ - INFO - Initializing result formatter...
+2025-07-16 12:20:38,960 - __main__ - INFO - All components initialized successfully
+2025-07-16 12:20:38,960 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-16 12:20:38,961 - __main__ - INFO - Loading transaction data...
+2025-07-16 12:20:38,961 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-16 12:20:38,961 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-16 12:20:40,938 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-16 12:20:40,939 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-16 12:20:41,296 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-16 12:20:41,297 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-16 12:20:41,892 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-16 12:20:41,892 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-16 12:20:41,892 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-16 12:20:41,893 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-16 12:20:41,893 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-16 12:20:41,893 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-16 12:20:41,893 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-16 12:20:41,894 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-16 12:20:41,896 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-16 12:20:41,907 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-16 12:20:41,907 - data.data_processor - INFO - All required columns are present
+2025-07-16 12:20:41,920 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-16 12:20:41,933 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-16 12:20:41,939 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-16 12:20:41,957 - data.data_processor - INFO - Cleaned category column: 20 unique categories
+2025-07-16 12:20:41,986 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-16 12:20:42,025 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-16 12:20:55,032 - data.data_processor - INFO - Filtered to 3669 valid transactions
+2025-07-16 12:20:55,033 - data.data_processor - INFO - Data processing completed: 3669 final transactions
+2025-07-16 12:20:55,034 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-16 12:20:55,035 - __main__ - INFO - Step 4: Generating data summary
+2025-07-16 12:20:55,041 - __main__ - INFO - Successfully loaded 3669 transactions
+2025-07-16 12:20:55,041 - __main__ - INFO - Data summary: {'total_transactions': 3669, 'date_range': {'start': '2021-07-22', 'end': '2025-06-30'}, 'total_amount': np.float64(129717.47), 'average_amount': np.float64(35.35499318615427), 'categories': {'Groceries': 831, 'Shopping': 524, 'Home': 516, 'Food': 462, 'Travel': 418, 'Vacation': 327, 'Bills & Utilities': 187, 'Food Nv': 127, 'Health': 114, 'Business': 43, 'Parentsg': 38, 'Gifts': 32, 'Education': 26, 'None': 7, 'Fees & Adjustments': 6, 'Health & Wellness': 4, 'Bills\xa0&\xa0Utilities': 3, 'Personal': 2, 'Automotive': 1, 'Other': 1}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 375, 'HONG KONG SUPERMARKET BOSTON MA': 89, 'UBER   TRIP': 89, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 40, 'TRADER JOE S #510 BOSTON MA': 35, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #501 BROOKLINE MA': 31, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30}, 'tabs': {'Citi': 2251, 'Chase': 1200, 'Cash': 218}}
+2025-07-16 12:20:55,042 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-16 12:20:55,042 - chatbot.conversation_manager - INFO - Created new session: session_1_20250716_122055
+2025-07-16 12:20:55,042 - __main__ - INFO - Created new chat session: session_1_20250716_122055
+2025-07-16 12:21:20,101 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-16 12:21:25,523 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:21:47,905 - analysis.query_translator - INFO - Successfully translated query: filter on month of may and travel , give me the top 5 expenses, include the year and month for each of the top expenses ?
+2025-07-16 12:21:47,908 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-16 12:24:40,273 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-16 12:24:40,287 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-16 12:24:40,291 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-16 12:24:51,660 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:24:51,681 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-16 12:24:54,861 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:25:02,504 - chatbot.conversation_manager - INFO - Processed message successfully: 1378 characters
+2025-07-16 12:26:14,449 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-16 12:26:17,668 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:26:23,616 - analysis.query_translator - ERROR - Error translating query 'can you also include the description in the above result ?': Forbidden operation detected: import
+2025-07-16 12:26:57,810 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-16 12:27:02,194 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:27:04,334 - analysis.query_translator - INFO - Successfully translated query: filter on month of may and travel , give me the top 5 expenses, include the year , month, description for each of the top expenses ?
+2025-07-16 12:27:04,335 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-16 12:27:12,523 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-16 12:27:12,524 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-16 12:27:12,524 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-16 12:27:21,111 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:27:21,126 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-16 12:27:24,946 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:27:31,641 - chatbot.conversation_manager - INFO - Processed message successfully: 1441 characters
+2025-07-16 12:29:55,465 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-16 12:29:59,163 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:30:01,717 - analysis.query_translator - INFO - Successfully translated query: filter on month of may and travel , give me the top 5 expenses, include the year , month, description , tab_namefor each of the top expenses ?
+2025-07-16 12:30:01,719 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-16 12:30:03,363 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-16 12:30:03,364 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-16 12:30:03,364 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-16 12:30:13,498 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:30:13,504 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-16 12:30:16,112 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:30:17,596 - chatbot.conversation_manager - INFO - Processed message successfully: 1831 characters
+2025-07-16 12:31:10,136 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-16 12:31:13,199 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:31:15,755 - analysis.query_translator - INFO - Successfully translated query: filter on month of may and travel , give me the top 5 expenses, include the year , month, description , tab name for each of the top expenses ?
+2025-07-16 12:31:15,756 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-16 12:32:44,587 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-16 12:32:56,333 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-16 12:33:05,105 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-16 12:40:42,176 - chatbot.conversation_manager - INFO - Closed session: session_1_20250716_122055
+2025-07-16 12:40:59,600 - __main__ - INFO - Initializing data connector...
+2025-07-16 12:40:59,618 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-16 12:40:59,634 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-16 12:40:59,634 - __main__ - INFO - Using Google Sheets connector
+2025-07-16 12:40:59,635 - __main__ - INFO - Initializing data processor...
+2025-07-16 12:40:59,635 - __main__ - INFO - Initializing LLM interface...
+2025-07-16 12:41:07,683 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-16 12:41:07,684 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-16 12:41:07,684 - __main__ - INFO - Initializing query translator...
+2025-07-16 12:41:07,684 - __main__ - INFO - Initializing result formatter...
+2025-07-16 12:41:07,684 - __main__ - INFO - All components initialized successfully
+2025-07-16 12:41:07,684 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-16 12:41:07,684 - __main__ - INFO - Loading transaction data...
+2025-07-16 12:41:07,685 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-16 12:41:07,685 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-16 12:41:09,230 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-16 12:41:09,231 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-16 12:41:09,572 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-16 12:41:09,572 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-16 12:41:09,902 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-16 12:41:09,902 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-16 12:41:09,902 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-16 12:41:09,902 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-16 12:41:09,903 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-16 12:41:09,903 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-16 12:41:09,903 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-16 12:41:09,903 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-16 12:41:09,906 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-16 12:41:09,913 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-16 12:41:09,914 - data.data_processor - INFO - All required columns are present
+2025-07-16 12:41:09,936 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-16 12:41:09,950 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-16 12:41:09,957 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-16 12:41:09,972 - data.data_processor - INFO - Cleaned category column: 20 unique categories
+2025-07-16 12:41:09,994 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-16 12:41:10,032 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-16 12:41:12,741 - data.data_processor - INFO - Filtered to 3669 valid transactions
+2025-07-16 12:41:12,742 - data.data_processor - INFO - Data processing completed: 3669 final transactions
+2025-07-16 12:41:12,743 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-16 12:41:12,744 - __main__ - INFO - Step 4: Generating data summary
+2025-07-16 12:41:12,760 - __main__ - INFO - Successfully loaded 3669 transactions
+2025-07-16 12:41:12,760 - __main__ - INFO - Data summary: {'total_transactions': 3669, 'date_range': {'start': '2021-07-22', 'end': '2025-06-30'}, 'total_amount': np.float64(129717.47), 'average_amount': np.float64(35.35499318615427), 'categories': {'Groceries': 831, 'Shopping': 524, 'Home': 516, 'Food': 462, 'Travel': 418, 'Vacation': 327, 'Bills & Utilities': 187, 'Food Nv': 127, 'Health': 114, 'Business': 43, 'Parentsg': 38, 'Gifts': 32, 'Education': 26, 'None': 7, 'Fees & Adjustments': 6, 'Health & Wellness': 4, 'Bills\xa0&\xa0Utilities': 3, 'Personal': 2, 'Automotive': 1, 'Other': 1}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 375, 'HONG KONG SUPERMARKET BOSTON MA': 89, 'UBER   TRIP': 89, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 40, 'TRADER JOE S #510 BOSTON MA': 35, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #501 BROOKLINE MA': 31, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30}, 'tabs': {'Citi': 2251, 'Chase': 1200, 'Cash': 218}}
+2025-07-16 12:41:12,761 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-16 12:41:12,761 - chatbot.conversation_manager - INFO - Created new session: session_1_20250716_124112
+2025-07-16 12:41:12,761 - __main__ - INFO - Created new chat session: session_1_20250716_124112
+2025-07-16 12:41:36,369 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-16 12:41:42,395 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:41:56,309 - analysis.query_translator - INFO - Successfully translated query: filter on month of may and travel , give me the top 5 expenses, include the year and month for each of the top expenses
+2025-07-16 12:41:56,309 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-16 12:42:09,040 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-16 12:42:09,047 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-16 12:42:09,054 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-16 12:42:19,540 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:42:19,565 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-16 12:42:22,139 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:42:27,510 - chatbot.conversation_manager - INFO - Processed message successfully: 1153 characters
+2025-07-16 12:44:21,143 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-16 12:44:25,277 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:44:26,972 - analysis.query_translator - ERROR - Error translating query 'What are the outlier costs in the last 6 months ?': Forbidden operation detected: import
+2025-07-16 12:50:35,514 - chatbot.conversation_manager - INFO - Closed session: session_1_20250716_124112
+2025-07-16 12:50:57,530 - __main__ - INFO - Initializing data connector...
+2025-07-16 12:50:57,542 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-16 12:50:57,568 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-16 12:50:57,568 - __main__ - INFO - Using Google Sheets connector
+2025-07-16 12:50:57,568 - __main__ - INFO - Initializing data processor...
+2025-07-16 12:50:57,569 - __main__ - INFO - Initializing LLM interface...
+2025-07-16 12:51:01,783 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-16 12:51:01,783 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-16 12:51:01,784 - __main__ - INFO - Initializing query translator...
+2025-07-16 12:51:01,784 - __main__ - INFO - Initializing result formatter...
+2025-07-16 12:51:01,784 - __main__ - INFO - All components initialized successfully
+2025-07-16 12:51:01,784 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-16 12:51:01,784 - __main__ - INFO - Loading transaction data...
+2025-07-16 12:51:01,784 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-16 12:51:01,785 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-16 12:51:03,368 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-16 12:51:03,369 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-16 12:51:03,821 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-16 12:51:03,821 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-16 12:51:04,237 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-16 12:51:04,238 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-16 12:51:04,238 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-16 12:51:04,239 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-16 12:51:04,239 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-16 12:51:04,239 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-16 12:51:04,240 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-16 12:51:04,240 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-16 12:51:04,245 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-16 12:51:04,263 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-16 12:51:04,264 - data.data_processor - INFO - All required columns are present
+2025-07-16 12:51:04,309 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-16 12:51:04,324 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-16 12:51:04,334 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-16 12:51:04,352 - data.data_processor - INFO - Cleaned category column: 20 unique categories
+2025-07-16 12:51:04,376 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-16 12:51:04,434 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-16 12:51:14,033 - data.data_processor - INFO - Filtered to 3669 valid transactions
+2025-07-16 12:51:14,035 - data.data_processor - INFO - Data processing completed: 3669 final transactions
+2025-07-16 12:51:14,035 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-16 12:51:14,036 - __main__ - INFO - Step 4: Generating data summary
+2025-07-16 12:51:14,062 - __main__ - INFO - Successfully loaded 3669 transactions
+2025-07-16 12:51:14,063 - __main__ - INFO - Data summary: {'total_transactions': 3669, 'date_range': {'start': '2021-07-22', 'end': '2025-06-30'}, 'total_amount': np.float64(129717.47), 'average_amount': np.float64(35.35499318615427), 'categories': {'Groceries': 831, 'Shopping': 524, 'Home': 516, 'Food': 462, 'Travel': 418, 'Vacation': 327, 'Bills & Utilities': 187, 'Food Nv': 127, 'Health': 114, 'Business': 43, 'Parentsg': 38, 'Gifts': 32, 'Education': 26, 'None': 7, 'Fees & Adjustments': 6, 'Health & Wellness': 4, 'Bills\xa0&\xa0Utilities': 3, 'Personal': 2, 'Automotive': 1, 'Other': 1}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 375, 'HONG KONG SUPERMARKET BOSTON MA': 89, 'UBER   TRIP': 89, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 40, 'TRADER JOE S #510 BOSTON MA': 35, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #501 BROOKLINE MA': 31, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30}, 'tabs': {'Citi': 2251, 'Chase': 1200, 'Cash': 218}}
+2025-07-16 12:51:14,063 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-16 12:51:14,064 - chatbot.conversation_manager - INFO - Created new session: session_1_20250716_125114
+2025-07-16 12:51:14,064 - __main__ - INFO - Created new chat session: session_1_20250716_125114
+2025-07-16 12:51:17,529 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-16 12:51:23,505 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:51:25,852 - analysis.query_translator - INFO - Successfully translated query: What are the outlier costs in the last 6 months ?
+2025-07-16 12:51:25,853 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-16 12:51:29,689 - analysis.pandas_executor - INFO - Successfully executed 10 operations
+2025-07-16 12:51:29,690 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-16 12:51:29,690 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-16 12:51:41,112 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:51:41,181 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-16 12:51:43,443 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-16 12:51:45,917 - chatbot.conversation_manager - INFO - Processed message successfully: 1825 characters
+2025-07-16 12:52:25,082 - chatbot.conversation_manager - INFO - Closed session: session_1_20250716_125114
+2025-07-21 15:42:42,822 - __main__ - INFO - Initializing data connector...
+2025-07-21 15:42:42,834 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-21 15:42:42,846 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-21 15:42:42,847 - __main__ - INFO - Using Google Sheets connector
+2025-07-21 15:42:42,847 - __main__ - INFO - Initializing data processor...
+2025-07-21 15:42:42,847 - __main__ - INFO - Initializing LLM interface...
+2025-07-21 15:42:45,199 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-21 15:42:45,199 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-21 15:42:45,200 - __main__ - INFO - Initializing query translator...
+2025-07-21 15:42:45,200 - __main__ - INFO - Initializing result formatter...
+2025-07-21 15:42:45,200 - __main__ - INFO - All components initialized successfully
+2025-07-21 15:42:45,200 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-21 15:42:45,200 - __main__ - INFO - Loading transaction data...
+2025-07-21 15:42:45,200 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-21 15:42:45,200 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-21 15:42:47,357 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-21 15:42:47,357 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-21 15:42:47,631 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-21 15:42:47,631 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-21 15:42:47,931 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-21 15:42:47,932 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-21 15:42:47,932 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-21 15:42:47,932 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-21 15:42:47,932 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-21 15:42:47,932 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-21 15:42:47,932 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-21 15:42:47,932 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-21 15:42:47,933 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-21 15:42:47,975 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-21 15:42:47,976 - data.data_processor - INFO - All required columns are present
+2025-07-21 15:42:47,984 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-21 15:42:47,990 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-21 15:42:47,994 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-21 15:42:48,003 - data.data_processor - INFO - Cleaned category column: 20 unique categories
+2025-07-21 15:42:48,011 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-21 15:42:48,048 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-21 15:42:48,051 - data.data_processor - INFO - Filtered to 3669 valid transactions
+2025-07-21 15:42:48,051 - data.data_processor - INFO - Data processing completed: 3669 final transactions
+2025-07-21 15:42:48,051 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-21 15:42:48,052 - __main__ - INFO - Step 4: Generating data summary
+2025-07-21 15:42:48,055 - __main__ - INFO - Successfully loaded 3669 transactions
+2025-07-21 15:42:48,055 - __main__ - INFO - Data summary: {'total_transactions': 3669, 'date_range': {'start': '2021-07-22', 'end': '2025-06-30'}, 'total_amount': np.float64(129717.47), 'average_amount': np.float64(35.35499318615427), 'categories': {'Groceries': 831, 'Shopping': 524, 'Home': 516, 'Food': 462, 'Travel': 418, 'Vacation': 327, 'Bills & Utilities': 187, 'Food Nv': 127, 'Health': 114, 'Business': 43, 'Parentsg': 38, 'Gifts': 32, 'Education': 26, 'None': 7, 'Fees & Adjustments': 6, 'Health & Wellness': 4, 'Bills\xa0&\xa0Utilities': 3, 'Personal': 2, 'Automotive': 1, 'Other': 1}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 375, 'HONG KONG SUPERMARKET BOSTON MA': 89, 'UBER   TRIP': 89, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 40, 'TRADER JOE S #510 BOSTON MA': 35, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #501 BROOKLINE MA': 31, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30}, 'tabs': {'Citi': 2251, 'Chase': 1200, 'Cash': 218}}
+2025-07-21 15:42:48,056 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-21 15:42:48,056 - chatbot.conversation_manager - INFO - Created new session: session_1_20250721_154248
+2025-07-21 15:42:48,056 - __main__ - INFO - Created new chat session: session_1_20250721_154248
+2025-07-21 15:43:18,993 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-21 15:43:22,338 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 15:43:22,344 - analysis.query_translator - INFO - Successfully translated query: if my groceries monthly budget is $500 , which months  have exceeded this budget ?
+2025-07-21 15:43:22,344 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-21 15:43:22,358 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-21 15:43:22,358 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-21 15:43:22,358 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-21 15:43:28,172 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 15:43:28,174 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-21 15:43:32,371 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 15:43:32,373 - chatbot.conversation_manager - INFO - Processed message successfully: 883 characters
+2025-07-21 15:46:58,094 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-21 15:47:00,665 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 15:47:00,671 - analysis.query_translator - INFO - Successfully translated query: Are there any specific items within the grocery expenses that consistently contribute to exceeding the budget, and if so, what are they?
+2025-07-21 15:47:00,671 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-21 15:47:00,728 - analysis.pandas_executor - INFO - Successfully executed 3 operations
+2025-07-21 15:47:00,728 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-21 15:47:00,729 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-21 15:47:09,670 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 15:47:09,674 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-21 15:47:11,821 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 15:47:11,823 - chatbot.conversation_manager - INFO - Processed message successfully: 2165 characters
+2025-07-21 15:49:20,888 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-21 15:49:23,652 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 15:49:23,660 - analysis.query_translator - INFO - Successfully translated query: what is the average cost by month spending on uber or lyft as description under the travel cateogory ?
+2025-07-21 15:49:23,660 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-21 15:49:23,766 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-21 15:49:23,766 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-21 15:49:23,768 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-21 15:49:29,385 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 15:49:29,389 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-21 15:49:31,027 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 15:49:31,034 - chatbot.conversation_manager - INFO - Processed message successfully: 1579 characters
+2025-07-21 16:36:44,284 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-21 16:36:49,584 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 16:36:49,599 - analysis.query_translator - INFO - Successfully translated query: Which categories grew fastest YoY ?
+2025-07-21 16:36:49,599 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-21 16:36:49,948 - analysis.pandas_executor - INFO - Successfully executed 4 operations
+2025-07-21 16:36:49,948 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-21 16:36:49,948 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-21 16:36:58,370 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 16:36:58,371 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-21 16:37:00,520 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 16:37:00,523 - chatbot.conversation_manager - INFO - Processed message successfully: 1853 characters
+2025-07-21 16:38:38,030 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-21 16:38:39,545 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-21 16:38:39,549 - analysis.query_translator - ERROR - Error translating query 'exit': No pandas operations provided
+2025-07-21 16:38:55,380 - chatbot.conversation_manager - INFO - Closed session: session_1_20250721_154248
+2025-07-22 17:25:00,022 - __main__ - INFO - Initializing data connector...
+2025-07-22 17:25:00,030 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-07-22 17:25:00,056 - data.google_sheets_connector - INFO - Successfully authenticated with Google Sheets API
+2025-07-22 17:25:00,056 - __main__ - INFO - Using Google Sheets connector
+2025-07-22 17:25:00,056 - __main__ - INFO - Initializing data processor...
+2025-07-22 17:25:00,056 - __main__ - INFO - Initializing LLM interface...
+2025-07-22 17:25:02,935 - chatbot.llm_interface - INFO - LLM interface initialized successfully
+2025-07-22 17:25:02,935 - __main__ - INFO - Using OpenAI LLM interface
+2025-07-22 17:25:02,935 - __main__ - INFO - Initializing query translator...
+2025-07-22 17:25:02,935 - __main__ - INFO - Initializing result formatter...
+2025-07-22 17:25:02,935 - __main__ - INFO - All components initialized successfully
+2025-07-22 17:25:02,935 - __main__ - INFO - Transaction Chatbot initialized successfully
+2025-07-22 17:25:02,935 - __main__ - INFO - Loading transaction data...
+2025-07-22 17:25:02,935 - __main__ - INFO - Step 1: Fetching data from Google Sheets
+2025-07-22 17:25:02,935 - data.google_sheets_connector - INFO - Fetching data from tab: Citi
+2025-07-22 17:25:05,242 - data.google_sheets_connector - INFO - Fetched 2253 rows from sheet: Citi
+2025-07-22 17:25:05,242 - data.google_sheets_connector - INFO - Fetching data from tab: Chase
+2025-07-22 17:25:05,579 - data.google_sheets_connector - INFO - Fetched 1200 rows from sheet: Chase
+2025-07-22 17:25:05,579 - data.google_sheets_connector - INFO - Fetching data from tab: Cash
+2025-07-22 17:25:05,880 - data.google_sheets_connector - INFO - Fetched 219 rows from sheet: Cash
+2025-07-22 17:25:05,880 - data.google_sheets_connector - INFO - Successfully fetched data from 3 tabs
+2025-07-22 17:25:05,880 - data.google_sheets_connector - INFO - Validated transaction tab: Citi
+2025-07-22 17:25:05,881 - data.google_sheets_connector - INFO - Validated transaction tab: Chase
+2025-07-22 17:25:05,881 - data.google_sheets_connector - INFO - Validated transaction tab: Cash
+2025-07-22 17:25:05,881 - data.google_sheets_connector - INFO - Found 3 valid transaction tabs
+2025-07-22 17:25:05,881 - __main__ - INFO - Step 2: Processing and cleaning data
+2025-07-22 17:25:05,881 - data.data_processor - INFO - Starting data processing pipeline
+2025-07-22 17:25:05,882 - data.data_processor - INFO - Combined data from 3 tabs: 3672 total rows
+2025-07-22 17:25:05,887 - data.data_processor - INFO - Cleaned column names: ['date', 'description', 'amount', '', 'category', 'tab_name']
+2025-07-22 17:25:05,887 - data.data_processor - INFO - All required columns are present
+2025-07-22 17:25:05,895 - data.data_processor - INFO - Cleaned date column: 3672 valid rows
+2025-07-22 17:25:05,899 - data.data_processor - WARNING - Found 3 rows with invalid amounts
+2025-07-22 17:25:05,901 - data.data_processor - INFO - Cleaned amount column: 3669 valid rows
+2025-07-22 17:25:05,907 - data.data_processor - INFO - Cleaned category column: 20 unique categories
+2025-07-22 17:25:05,914 - data.data_processor - INFO - Cleaned description column: 1871 unique descriptions
+2025-07-22 17:25:05,939 - data.data_processor - INFO - Added time period columns for analysis
+2025-07-22 17:25:05,943 - data.data_processor - INFO - Filtered to 3669 valid transactions
+2025-07-22 17:25:05,943 - data.data_processor - INFO - Data processing completed: 3669 final transactions
+2025-07-22 17:25:05,943 - __main__ - INFO - Step 3: Initializing pandas executor
+2025-07-22 17:25:05,944 - __main__ - INFO - Step 4: Generating data summary
+2025-07-22 17:25:05,947 - __main__ - INFO - Successfully loaded 3669 transactions
+2025-07-22 17:25:05,947 - __main__ - INFO - Data summary: {'total_transactions': 3669, 'date_range': {'start': '2021-07-22', 'end': '2025-06-30'}, 'total_amount': np.float64(129717.47), 'average_amount': np.float64(35.35499318615427), 'categories': {'Groceries': 831, 'Shopping': 524, 'Home': 516, 'Food': 462, 'Travel': 418, 'Vacation': 327, 'Bills & Utilities': 187, 'Food Nv': 127, 'Health': 114, 'Business': 43, 'Parentsg': 38, 'Gifts': 32, 'Education': 26, 'None': 7, 'Fees & Adjustments': 6, 'Health & Wellness': 4, 'Bills\xa0&\xa0Utilities': 3, 'Personal': 2, 'Automotive': 1, 'Other': 1}, 'descriptions': {'STAR OSCO 3588 BOSTON MA': 375, 'HONG KONG SUPERMARKET BOSTON MA': 89, 'UBER   TRIP': 89, 'DOLLARTREE BOSTON MA': 67, 'ALLSTON MARKET ALLSTON MA': 53, 'CVS/PHARMACY #01876 BOSTON MA': 40, 'TRADER JOE S #510 BOSTON MA': 35, 'TARGET 00032268 BOSTON MA': 33, 'TRADER JOE S #501 BROOKLINE MA': 31, 'BAZAAR ON CAMBRIDGE ALLSTON MA': 30}, 'tabs': {'Citi': 2251, 'Chase': 1200, 'Cash': 218}}
+2025-07-22 17:25:05,948 - chatbot.conversation_manager - INFO - Conversation manager initialized
+2025-07-22 17:25:05,948 - chatbot.conversation_manager - INFO - Created new session: session_1_20250722_172505
+2025-07-22 17:25:05,948 - __main__ - INFO - Created new chat session: session_1_20250722_172505
+2025-07-22 17:25:14,671 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-22 17:25:19,357 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-22 17:25:19,372 - analysis.query_translator - ERROR - Error translating query 'can you give the top 5 expense in the last month for travel ?': Forbidden operation detected: import
+2025-07-22 17:26:19,499 - chatbot.conversation_manager - INFO - Step 1: Translating query to pandas operations
+2025-07-22 17:26:22,867 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-22 17:26:22,873 - analysis.query_translator - INFO - Successfully translated query: filter on month of may and travel , give me the top 5 expenses, include the year and month for each of the top expenses
+2025-07-22 17:26:22,873 - chatbot.conversation_manager - INFO - Step 2: Executing pandas operations
+2025-07-22 17:26:22,895 - analysis.pandas_executor - INFO - Successfully executed 5 operations
+2025-07-22 17:26:22,896 - chatbot.conversation_manager - INFO - Step 3: Formatting results
+2025-07-22 17:26:22,896 - chatbot.conversation_manager - INFO - Step 4: Generating natural language response
+2025-07-22 17:26:30,257 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-22 17:26:30,259 - chatbot.conversation_manager - INFO - Step 5: Generating follow-up questions
+2025-07-22 17:26:34,558 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-22 17:26:34,634 - chatbot.conversation_manager - INFO - Processed message successfully: 1210 characters
+2025-07-22 17:26:56,557 - chatbot.conversation_manager - INFO - Closed session: session_1_20250722_172505
