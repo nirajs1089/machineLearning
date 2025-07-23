@@ -16,8 +16,8 @@ from openai import OpenAI
 bank_name = "Citibank Online"  # for plaid flow
 
 map = {
-    "Citibank Online": "access-production-22f765ec-73b9-4944-97b4-546366a52bbf",
-    "Bank of America": "access-production-d6d2732f-7910-43f0-809c-e5020822993a",
+    "Citibank Online": "access_token",
+    "Bank of America": "access_token",
 }
 
 raw_df = download_file(map[bank_name], bank_name)
