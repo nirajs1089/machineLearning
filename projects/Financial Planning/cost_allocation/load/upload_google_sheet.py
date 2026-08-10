@@ -68,9 +68,12 @@ class Loader:
             #     chase_sheet.update(chase_range, chase_data_to_upload)
             #     print(f"Chase data uploaded to {chase_range}")
 
-            bank_tab_map = {"Citibank Online": "Citi",
+            bank_tab_map = {"citibank online": "Citi",
                             "chase": "Chase",
-                            "Bank of America": "Cash"}
+                            "bank of america": "Cash",
+                            "capital one": "Capital"}
+
+            print(f"{bank_name} mapped to tab {bank_tab_map[bank_name]}")
 
             # Process Citi data - get existing worksheet
             citi_sheet = spreadsheet.worksheet(bank_tab_map[bank_name])

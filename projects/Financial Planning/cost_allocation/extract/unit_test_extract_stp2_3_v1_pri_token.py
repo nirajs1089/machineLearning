@@ -2,12 +2,14 @@ import os
 import webbrowser
 import threading
 import time
+import uuid
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
 import json
 from plaid.api import plaid_api
 from plaid.model.link_token_create_request import LinkTokenCreateRequest
 from plaid.model.link_token_create_request_user import LinkTokenCreateRequestUser
+from plaid.model.link_token_transactions import LinkTokenTransactions
 from plaid.model.country_code import CountryCode
 from plaid.model.item_public_token_exchange_request import (
     ItemPublicTokenExchangeRequest,
@@ -23,6 +25,26 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from extract.unit_test_stp4_v2 import download_file
 
 """gets the access token for Citi"""
+
+DEBUG_LOG_PATH = "/Users/vishankagandhi/Documents/git/machineLearning/projects/Financial Planning/cost_allocation/.cursor/debug-f84117.log"
+DEBUG_SESSION_ID = "f84117"
+
+
+def _debug_log(hypothesis_id, location, message, data):
+    # #region agent log
+    payload = {
+        "sessionId": DEBUG_SESSION_ID,
+        "runId": "initial",
+        "hypothesisId": hypothesis_id,
+        "location": location,
+        "message": message,
+        "data": data,
+        "timestamp": int(time.time() * 1000),
+        "id": f"log_{int(time.time() * 1000)}_{uuid.uuid4().hex[:8]}",
+    }
+    with open(DEBUG_LOG_PATH, "a", encoding="utf-8") as f:
+        f.write(json.dumps(payload) + "\n")
+    # #endregion
 
 
 class PlaidLinkHandler(BaseHTTPRequestHandler):
@@ -238,13 +260,26 @@ class PlaidLocalLink:
         try:
             user = LinkTokenCreateRequestUser(client_user_id=user_id)
 
+            # Request 730 days of transaction history so full-month history is available.
+            # Items created before this was set cannot be extended; remove and re-link to get more history.
             request = LinkTokenCreateRequest(
                 products=[Products("transactions")],
                 client_name=client_name,
                 country_codes=[CountryCode("US")],
                 language="en",
                 user=user,
+                transactions=LinkTokenTransactions(days_requested=730),
                 # redirect_uri='http://localhost:8080/success'  # Local redirect
+            )
+            _debug_log(
+                "H1",
+                "unit_test_extract_stp2_3_v1_pri_token.py:create_link_token",
+                "Created link token request",
+                {
+                    "products": ["transactions"],
+                    "transactions_days_requested": 730,
+                    "client_name": client_name,
+                },
             )
 
             response = self.client.link_token_create(request)
@@ -332,6 +367,15 @@ class PlaidLocalLink:
         try:
             result = self.exchange_public_token(server.public_token)
             print("✅ Successfully obtained access token!")
+            _debug_log(
+                "H2",
+                "unit_test_extract_stp2_3_v1_pri_token.py:run_link_flow",
+                "Exchanged public token",
+                {
+                    "item_id": result["item_id"],
+                    "has_access_token": bool(result["access_token"]),
+                },
+            )
 
             return {
                 "access_token": result["access_token"],
@@ -348,14 +392,14 @@ class PlaidLocalLink:
 # Example usage
 def extract(bank_name=None):
     """Example of how to use the PlaidLocalLink class"""
-    if bank_name == "chase":
-        return download_file(None, bank_name), bank_name
+    # if bank_name == "chase":
+    #     return download_file(None, bank_name), bank_name
 
     # Set your Plaid credentials
     PLAID_CLIENT_ID = os.getenv("PLAID_CLIENT_ID")
     PLAID_SECRET = os.getenv("PLAID_SECRET")
 
-    # if CLIENT_ID == 'your_client_id_here' or SECRET == 'your_secret_here':
+    # if CLIENT_ID == 'your_client_ whatid_here' or SECRET == 'your_secret_here':
     #     print("❌ Please set your PLAID_CLIENT_ID and PLAID_SECRET environment variables")
     #     print("   export PLAID_CLIENT_ID='your_actual_client_id'")
     #     print("   export PLAID_SECRET='your_actual_secret'")
@@ -380,6 +424,16 @@ def extract(bank_name=None):
         metadata = json.loads(result["metadata"])
 
         bank_name = metadata["institution"]["name"]
+        _debug_log(
+            "H3",
+            "unit_test_extract_stp2_3_v1_pri_token.py:extract",
+            "Plaid link metadata resolved bank",
+            {
+                "institution_name": bank_name,
+                "institution_id": metadata.get("institution", {}).get("institution_id"),
+                "item_id": result["item_id"],
+            },
+        )
         print("\n🎉 SUCCESS! Bank account connected!")
         print(f"private Access Token: {result['access_token']}...")
         print(f"Logged in to Bank {bank_name}")

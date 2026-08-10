@@ -9,8 +9,8 @@ from load.upload_google_sheet import Loader
 from transform.openai_allocate_cost import transform
 
 # delete the old chase file for the new month
-bank_name="chase"
-# bank_name = None  # for plaid flow
+# bank_name="chase" 
+bank_name = None  #  for plaid flow
 
 raw_df, bank_name = extract(bank_name=bank_name)
 

@@ -1,6 +1,7 @@
 import plaid
 from plaid.api import plaid_api
 from plaid.model.transactions_get_request import TransactionsGetRequest
+from plaid.model.transactions_refresh_request import TransactionsRefreshRequest
 from plaid.model.item_public_token_exchange_request import (
     ItemPublicTokenExchangeRequest,
 )
@@ -13,6 +14,8 @@ from plaid.api_client import ApiClient
 from datetime import datetime, timedelta
 import logging
 import time, os
+import uuid
+import json
 from plaid.exceptions import ApiException
 from datetime import date, datetime, timedelta, time as datetime_time
 from dataclasses import dataclass
@@ -38,6 +41,25 @@ PLAID_ENV = plaid.Environment.Production  # Use sandbox environment
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+DEBUG_LOG_PATH = "/Users/vishankagandhi/Documents/git/machineLearning/projects/Financial Planning/cost_allocation/.cursor/debug-f84117.log"
+DEBUG_SESSION_ID = "f84117"
+
+
+def _debug_log(hypothesis_id, location, message, data):
+    # #region agent log
+    payload = {
+        "sessionId": DEBUG_SESSION_ID,
+        "runId": "initial",
+        "hypothesisId": hypothesis_id,
+        "location": location,
+        "message": message,
+        "data": data,
+        "timestamp": int(time.time() * 1000),
+        "id": f"log_{int(time.time() * 1000)}_{uuid.uuid4().hex[:8]}",
+    }
+    with open(DEBUG_LOG_PATH, "a", encoding="utf-8") as f:
+        f.write(json.dumps(payload) + "\n")
+    # #endregion
 
 
 @dataclass
@@ -118,6 +140,7 @@ class PlaidCreditCardClient:
 
         try:
             while True:
+
                 request = TransactionsGetRequest(
                     access_token=access_token,
                     start_date=start_date.date(),
@@ -129,6 +152,17 @@ class PlaidCreditCardClient:
 
                 response = self.rate_limiter.make_request(
                     self.client.transactions_get, request
+                )
+                _debug_log(
+                    "H4",
+                    "unit_test_stp4_v2.py:get_transactions",
+                    "transactions_get response metadata",
+                    {
+                        "start_date": str(start_date.date()),
+                        "end_date": str(end_date.date()),
+                        "response_total_transactions": response.get("total_transactions"),
+                        "batch_count": len(response.get("transactions", [])),
+                    },
                 )
 
                 batch_transactions = response["transactions"]
@@ -159,9 +193,20 @@ class PlaidCreditCardClient:
 
         except ApiException as e:
             logger.error(f"Error fetching transactions: {e}")
+            _debug_log(
+                "H4",
+                "unit_test_stp4_v2.py:get_transactions",
+                "transactions_get raised ApiException",
+                {"error": str(e), "start_date": str(start_date.date()), "end_date": str(end_date.date())},
+            )
             raise
 
         return transactions
+
+    def refresh_transactions(self, access_token: str):
+        """Trigger Plaid to refresh transaction data for an Item."""
+        request = TransactionsRefreshRequest(access_token=access_token)
+        return self.rate_limiter.make_request(self.client.transactions_refresh, request)
 
     def _identify_bank(self, account_id: str) -> str:
         """Identify bank from account ID pattern"""
@@ -180,13 +225,21 @@ def first_and_last_of_previous_month() -> tuple[str, str]:
     in YYYY-MM-DD format.
     """
     today = date.today()
-    first_this_month = today.replace(day=1)  # e.g. 2025-06-01
-    last_prev_month = first_this_month - timedelta(days=1)  # e.g. 2025-05-31
-    first_prev_month = last_prev_month.replace(day=1)  # e.g. 2025-05-01
+    first_this_month = today.replace(day=1)
+    last_prev_month = first_this_month - timedelta(days=1)
+    first_prev_month = last_prev_month.replace(day=1)
 
-    # Convert the `date` objects to `datetime` at midnight
     first_dt = datetime.combine(first_prev_month, datetime_time.min)
     last_dt = datetime.combine(last_prev_month, datetime_time.min)
+
+    print(first_dt.date())
+    print(last_dt.date())
+    _debug_log(
+        "H5",
+        "unit_test_stp4_v2.py:first_and_last_of_previous_month",
+        "Computed date window for previous month",
+        {"start_date": str(first_dt.date()), "end_date": str(last_dt.date())},
+    )
 
     return first_dt, last_dt
 
@@ -194,24 +247,24 @@ def first_and_last_of_previous_month() -> tuple[str, str]:
 def download_file(private_access_token, bank_name):
 
     # remove this block once approved fo plaid chase
-    if bank_name == "chase":
-        import glob
+    # if bank_name == "chase":
+    #     import glob
 
-        DIRECTORY_PATH = os.getenv("INPUT_FILE_LOCATION")
+    #     DIRECTORY_PATH = os.getenv("INPUT_FILE_LOCATION")
 
-        chase_files = glob.glob(
-            os.path.join(DIRECTORY_PATH, "*Chase*.csv")
-        ) + glob.glob(os.path.join(DIRECTORY_PATH, "*Chase*.CSV"))
+    #     chase_files = glob.glob(
+    #         os.path.join(DIRECTORY_PATH, "*Chase*.csv")
+    #     ) + glob.glob(os.path.join(DIRECTORY_PATH, "*Chase*.CSV"))
 
-        raw_df = pd.read_csv(chase_files[0])
+    #     raw_df = pd.read_csv(chase_files[0])
 
-        # 2. Rename selected columns only
-        # Transaction Date, Post Date, Description, Category, Type, Amount, Memo
-        # Clean column names (remove extra spaces)
-        raw_df.columns = raw_df.columns.str.strip()
-        print(f"Chase columns: {list(raw_df.columns)}")
-        # transform(raw_df,bank_name)
-        return raw_df
+    #     # 2. Rename selected columns only
+    #     # Transaction Date, Post Date, Description, Category, Type, Amount, Memo
+    #     # Clean column names (remove extra spaces)
+    #     raw_df.columns = raw_df.columns.str.strip()
+    #     print(f"Chase columns: {list(raw_df.columns)}")
+    #     # transform(raw_df,bank_name)
+    #     return raw_df
 
     plaid_client = PlaidCreditCardClient(
         client_id=PLAID_CLIENT_ID, secret=PLAID_SECRET, environment="production"
@@ -221,6 +274,16 @@ def download_file(private_access_token, bank_name):
     # end_date = datetime.strptime("2025-05-31", '%Y-%m-%d')
 
     start_date, end_date = first_and_last_of_previous_month()
+    _debug_log(
+        "H5",
+        "unit_test_stp4_v2.py:download_file",
+        "Date window and bank used for fetch",
+        {
+            "bank_name": bank_name,
+            "start_date": str(start_date.date()),
+            "end_date": str(end_date.date()),
+        },
+    )
 
     all_transactions = []
     access_tokens = {bank_name: private_access_token}
@@ -234,6 +297,55 @@ def download_file(private_access_token, bank_name):
                 access_token=access_token, start_date=start_date, end_date=end_date
             )
 
+            # New Items: Plaid backfills history asynchronously. If 0 transactions, retry once
+            # after a short delay in case sync just finished.
+            if len(transactions) == 0:
+                logger.warning(
+                    f"Got 0 transactions from {bank} for {start_date.date()}–{end_date.date()}. "
+                    "If you just re-linked, Plaid may still be syncing. Retrying once in 60s..."
+                )
+                time.sleep(60)
+                transactions = plaid_client.get_transactions(
+                    access_token=access_token, start_date=start_date, end_date=end_date
+                )
+                if len(transactions) == 0:
+                    logger.warning(
+                        "Still 0 transactions. Wait 15–30 minutes and run again, or check the date range."
+                    )
+
+            # Newly linked items can return only recent days at first (e.g., Mar 27-31).
+            # If earliest transaction date is after the requested start date, ask Plaid to
+            # refresh and retry a few times for historical backfill.
+            if transactions:
+                earliest_txn_date = min(datetime.strptime(t.date, "%Y-%m-%d").date() for t in transactions)
+                requested_start = start_date.date()
+                if earliest_txn_date > requested_start:
+                    logger.warning(
+                        f"Incomplete month for {bank}: earliest={earliest_txn_date}, requested_start={requested_start}. "
+                        "Triggering refresh and retrying for historical sync..."
+                    )
+                    for attempt in range(1, 5):
+                        try:
+                            plaid_client.refresh_transactions(access_token)
+                        except Exception as refresh_error:
+                            logger.warning(f"transactions_refresh attempt {attempt} failed: {refresh_error}")
+
+                        time.sleep(20)
+                        retry_transactions = plaid_client.get_transactions(
+                            access_token=access_token, start_date=start_date, end_date=end_date
+                        )
+                        if retry_transactions:
+                            retry_earliest = min(
+                                datetime.strptime(t.date, "%Y-%m-%d").date() for t in retry_transactions
+                            )
+                            logger.info(
+                                f"Retry attempt {attempt}: fetched {len(retry_transactions)} transactions, "
+                                f"earliest={retry_earliest}"
+                            )
+                            transactions = retry_transactions
+                            if retry_earliest <= requested_start:
+                                break
+
             # Add bank identifier
             for txn in transactions:
                 txn.bank = bank
@@ -243,6 +355,12 @@ def download_file(private_access_token, bank_name):
 
         except Exception as e:
             logger.error(f"Error downloading from {bank}: {e}")
+            _debug_log(
+                "H4",
+                "unit_test_stp4_v2.py:download_file",
+                "download_file caught exception from get_transactions",
+                {"bank_name": bank, "error": str(e), "start_date": str(start_date.date()), "end_date": str(end_date.date())},
+            )
             continue
 
     records = []  # list that will hold each row-dict
@@ -281,4 +399,5 @@ def download_file(private_access_token, bank_name):
 
 
 # create_link_token_api()
+# first_and_last_of_previous_month()
 

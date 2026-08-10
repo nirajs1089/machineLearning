@@ -34,6 +34,7 @@ class BankName(Enum):
     BANK_OF_AMERICA = "Bank of America".lower()
     CITIBANK_ONLINE = "Citibank Online".lower()
     CHASE = "chase".lower()
+    CAPITAL_ONE = "Capital One".lower()
 
 class RateLimiter:
     def __init__(self, requests_per_minute: int = 60):
@@ -527,8 +528,8 @@ class EnhancedTransactionCategorizer:
         """Process Citi data with enhanced categorization"""
         # Filter by date if specified
 
-        if bank_name == BankName.CHASE.value or (isinstance(bank_name, str) and bank_name.lower() == "chase"):
-            self.citi_data.rename(columns={"Post Date": "Date"}, inplace=True)
+        # if bank_name == BankName.CHASE.value or (isinstance(bank_name, str) and bank_name.lower() == "chase"):
+        #     self.citi_data.rename(columns={"Post Date": "Date"}, inplace=True)
 
         filtered_citi = self.filter_by_date(self.citi_data.copy(), "Date")
 
@@ -541,18 +542,20 @@ class EnhancedTransactionCategorizer:
 
         bank_patterns = {
             BankName.BANK_OF_AMERICA: [
-                "credit",
                 "FID BKG",
-                "Recurring",
+                # "Gandhi",
                 "AUTOPAY",
-                "Fuller Associates",
-                "Recurring",
+                "DraftKings",
             ],
-            BankName.CITIBANK_ONLINE: [
+            BankName.CITIBANK_ONLINE:[
                 "AUTOPAY",
             ],
             BankName.CHASE: [
                 "AUTOMATIC PAYMENT",
+            ],
+            BankName.CAPITAL_ONE: [
+                "AUTOMATIC PAYMENT",
+                 "AUTOPAY",
             ],
         }
 

@@ -10,7 +10,7 @@ from typing import List, Dict, Any
 GOOGLE_SHEETS_CONFIG = {
     "spreadsheet_name": "Shahdhi Planning",
     "spreadsheet_id": "1_WdlG7nwnHOsdCwhbM0AsM7psoU9g_oBXEEyezK3UmQ",# or os.getenv("GOOGLE_SPREADSHEET_ID", ""),
-    "credentials_file": "/Users/vishankagandhi/Documents/cost_allocation/nirajs1089-11250649e9d3.json",# or os.getenv("GOOGLE_CREDENTIALS_FILE", "credentials.json"),
+    "credentials_file": "/Users/vishankagandhi/Documents/git/credentials/nirajs1089-11250649e9d3.json",# or os.getenv("GOOGLE_CREDENTIALS_FILE", "credentials.json"),
     "scopes": ["https://www.googleapis.com/auth/spreadsheets.readonly"],
     "tab_names": ["Citi", "Chase", "Cash"],  # Configurable tab names
     "data_range": "B:F"  # Configurable range for data
@@ -32,6 +32,19 @@ DATA_SCHEMA = {
     "category_column": "category",
     "description_column": "description",
     "date_column": "date"
+}
+
+# Error Messages Configuration
+ERROR_MESSAGES = {
+    "missing_credentials": "Google API credentials not found. Please check your credentials file path.",
+    "invalid_spreadsheet": "Invalid spreadsheet ID or access denied. Please check your spreadsheet ID and permissions.",
+    "no_data_found": "No transaction data found in the specified sheets.",
+    "invalid_data_format": "Data format is invalid. Please check your sheet structure.",
+    "connection_failed": "Failed to connect to Google Sheets API.",
+    "processing_error": "Error processing transaction data.",
+    "query_translation_failed": "Failed to translate query to pandas operations.",
+    "execution_failed": "Failed to execute pandas operations.",
+    "llm_error": "Error communicating with LLM service."
 }
 
 # Query Translation Configuration
